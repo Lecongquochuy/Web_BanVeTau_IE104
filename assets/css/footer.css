@@ -1,28 +1,22 @@
 .footer{
+    font-family: Arial, Helvetica, sans-serif;
     position:absolute;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 400px;
+    height: 600px;
     background-color: rgb(13, 8, 93);
     color: rgb(255, 255, 255);
 }
-.flex-container{
+.footer-flex-container{
+    margin-top: 100px;
     display: flex;
     justify-content: space-evenly;
 }
-.flex-container__box{
-    position: relative;
-    height: 250px;
-    width: 300px;
-    border: 2px solid rgb(0, 0, 0);
-    top: 20px;
-    bottom: 20px;
-}
-.flex-container__box-title{
+.footer-flex-container__box-title{
     font-weight: bold;
 }
-.flex-container__box-content{
+.footer-flex-container__box-content{
     font-weight:lighter;
     color: rgb(210, 146, 67);
     text-decoration: none;
@@ -32,24 +26,29 @@ a:hover{
     color: rgb(6, 239, 247);
     text-decoration: underline;
 }
-.flex-container__box-logo{
+.footer-flex-container__box-logo{
     height: 90px;
     width: 300px;
 }
-.flex-container__box-icon{
+.footer-flex-icon-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-flex-container__box-icon{
     height: 50px;
     width: 50px;
-    opacity: 0.3;
+    opacity: 0.6;
     font-size: 50px;
 }
-.flex-container__box-icon:hover{
+.footer-flex-container__box-icon:hover{
     opacity: 1.0;
 }
-.flex-container__box-bank-logo{
+.footer-flex-container__box-bank-logo{
     height: 150px;
     width: 300px;
 }
-.relative-container{
+.footer-relative-container{
+    margin-top: 100px;
     text-align: center;
     position: relative;
     height: 30px;
