@@ -53,3 +53,102 @@ a:hover{
     position: relative;
     text-align: center;
 }
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    height: 75px;
+    width: 100%;
+    background-color: #80bde6;
+    position: fixed;
+}
+
+.header__log{
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+.header__log--webname{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: fit-content;
+}
+.header__log--webname--logo{
+    height: 50px;
+    width: 125px;
+    position: absolute;
+}
+b{
+    position: absolute;
+    top: 50px;
+    width: 125px;
+    text-align: center;
+}
+.header__log--btn{
+    width: 85px;
+    position: absolute;
+    margin: 10px 5px 0px;
+    top: 0;
+    text-align: center;    
+    font-size: 15px;
+}
+.header__log--btn:hover > a{
+    color: white;
+}
+#signup{
+    right: 0px;
+}
+#signin{
+    right: 90px;
+}
+#help{
+    right: 180px;
+}
+.nav{
+    text-align: center;
+}
+
+.nav li{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+    padding: 0 12px;
+    line-height: 38px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none; 
+}
+
+.nav a:hover{
+    color: aliceblue;    
+    background-color: rgba(35, 32, 32, 0.2);
+    padding: 5px;
+}
+
+ul.nav__more{
+    display: none;
+    background-color: #80bde6;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    line-height: 38px;
+    width: 170px;
+}
+ul.nav__more li{
+    top: 0;
+}
+
+li:hover .nav__more{
+    display: block;
+}
