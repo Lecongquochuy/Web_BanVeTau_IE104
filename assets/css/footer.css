@@ -1,58 +1,106 @@
+
 .footer{
+    /* font-family: Arial, Helvetica, sans-serif; */
     position:absolute;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 400px;
-    background-color: rgb(13, 8, 93);
+    height: 500px;
+    /* background-color: rgb(13, 8, 93); */
+    background-color: rgba(28, 41, 48, 1);
     color: rgb(255, 255, 255);
 }
-.flex-container{
+.footer-container{
+    /* margin-left: calc(calc(100% - 1200px)/2);
+    margin-right: calc(calc(100% - 1200px)/2); */
+    /* margin-right: 250px; */
+
+}
+.footer-flex-container{
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* max-width: 1200px; */
+    padding-top: 56px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width:100%
+
 }
-.flex-container__box{
-    position: relative;
-    height: 250px;
-    width: 300px;
-    border: 2px solid rgb(0, 0, 0);
-    top: 20px;
-    bottom: 20px;
+.footer-flex-container-group {
+    max-width: 250px;
 }
-.flex-container__box-title{
+.footer-flex-container__box-title{
+    margin: 12px 0;
+    font-size: 2rem;
     font-weight: bold;
 }
-.flex-container__box-content{
+.group--element {
+    display: flex;
+    flex-direction: column;
+}
+.footer-flex-container__box-content{
+    margin: 10px 0px;
     font-weight:lighter;
     color: rgb(210, 146, 67);
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.6rem;
 }
 a:hover{
     color: rgb(6, 239, 247);
     text-decoration: underline;
 }
-.flex-container__box-logo{
+.footer-flex-container__box-logo{
     height: 90px;
-    width: 300px;
+    width: 250px;
 }
-.flex-container__box-icon{
+.footer-flex-icon-container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-flex-container__box-icon{
     height: 50px;
     width: 50px;
-    opacity: 0.3;
+    opacity: 0.6;
     font-size: 50px;
 }
-.flex-container__box-icon:hover{
+.footer-flex-container__box-icon:hover{
     opacity: 1.0;
 }
-.flex-container__box-bank-logo{
-    height: 150px;
-    width: 300px;
+.footer__bank-logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
 }
-.relative-container{
+.footer-flex-container__box-bank-logo{
+    height: 45px;
+    width: 75px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 8px;
+
+}
+.footer__hr{
+    margin: 36px 0px;
+}
+.footer-relative-container{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     position: relative;
-    height: 30px;
+    height: 100%;
     width: 100%;
+}
+.footer_address {
+    font-size: 1.4rem;
+    padding-bottom: 12px;
+
+}
+.footer__copyright {
+    font-size: 1.4rem;
+    padding-bottom: 12px;
+    font-weight: bold;
 }
 
