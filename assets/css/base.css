@@ -1,3 +1,43 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: rgb(118, 118, 118);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;    /*100% mac dinh la 16px */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif; 
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    align-items: center;
+    min-width: 146px;
+    min-height: 36px;
+    text-decoration: none;
+}
+
 .form__title{
     color: rgb(255, 255, 255);
     background: linear-gradient(179deg, #00004d 0%, #5333ed 49%, #2cd4d9 100%);
@@ -14,3 +54,4 @@
 .form__button:hover{
     border: 3px solid rgb(30, 0, 255);
 }
+
