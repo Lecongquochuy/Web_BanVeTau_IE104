@@ -1,0 +1,117 @@
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    position: relative;
+    margin: 70px 0px;
+}
+.form-trave-container{
+    padding: 10px 0px;
+    padding-left: 16px;
+}
+.form-trave-container__line-container{
+    height: 20px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 60px;
+    display: block;
+}
+.form-trave-container__line-container-row-node-container{
+    margin: 0px 60px;
+}
+.form-trave-container__line-container-row-node{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 170px;
+    top: 10px;
+}
+.form-trave-container__line-container-row-name-container{
+    padding: 20px 25px;
+    font-size: 15px;
+    text-align: center;
+}
+.form-trave-container__line-container-row-name{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 100px;
+}
+.form-trave-container__line-container-row-name-active{
+    color: #3a87ad;
+}
+.form-trave-container__title{
+    margin: 10px 10px;
+}
+.form-trave-container__sub-title{
+    font-weight: bold;
+    font-size: 17px;
+    margin: 10px 0px;
+}
+.form-trave-container__title-notice{
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    border-radius: 5px;
+    color: #3a87ad;
+    padding: 15px 15px;
+    margin-top: 10px 0px;
+    font-size: 15px;
+}
+.form-trave-container__content{
+    margin: 0px 115px;
+    padding: 14px 0px;
+    padding-left: 16px;
+    width: 500px;
+}
+.form-trave-container__content-login{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+}
+.form-trave-container__content-asterisk--color{
+    color: rgb(255, 0, 0);
+}
+.form-trave-container__content-title{
+    text-align: right;
+    font-weight: bold;
+    color: rgb(90, 86, 86);
+    padding: 12px 0px;
+    font-size: 15px;
+}
+.form-trave-container__content-input{
+    padding: 15px 15px;
+    height: 40px;
+    font-size: 15px;
+}
+.form-trave-container__content-btn{
+    display: grid;
+    padding: 10px 15px;
+    grid-template-columns: 1fr 1fr;
+}
+.form-trave-container__content-link{
+    padding: 12px 0px;
+    text-decoration: none;
+    color: #2fa4e7;
+    font-size: 15px;
+}
+.form-trave-container__content-link:hover{
+    color: #157ab5;
+    text-decoration: underline;
+}
+.form-trave__title{
+    color: rgb(255, 255, 255);
+    background-color: #0082c4;
+    width: 160px;
+    margin: 5px 0px;
+}
+.form-trave__btn{
+    height: 40px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: #54b4eb;
+    border-radius: 5px;
+    border: 0px;
+    margin-left: 103px;
+    font-size: 17px;
+}
+.form-trave__btn:hover{
+    border: 1px solid rgb(30, 0, 255);
+}
