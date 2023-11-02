@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/form-ttdc.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
 </head>
 <body>
     <div class="app">
@@ -17,7 +18,6 @@
                     <div class="header__log--webname">
                         <a href="#" class="">
                             <img src="./assets/img/logo_tau.png" alt="" class="header__log--webname--logo">
-                            <!-- <div class="logo--name">VÉ TÀU</div> -->
                         </a>
                     </div>
                     <div class="header--info">
@@ -65,9 +65,35 @@
         </header>
 
         <div class="container">
-
+            <div class="grid">
+                <div class="form-container">
+                    <div></div>
+                    <div class="form-ttdc-container">
+                        <form name="form-ttdc">
+                            <div class="form-ttdc-container__title">
+                                <h2 class="form-ttdc__title">TRA CỨU THÔNG TIN ĐẶT CHỖ</h2>
+                                <p class="form-ttdc-container__sub-title">Để tra cứu thông tin, quý khách vui lòng nhập chính xác 3 thông tin bên dưới.</p>
+                            </div>
+                            <div class="form-ttdc-container__content">
+                                <div class="form-ttdc-container__content-login">
+                                    <p class="form-ttdc-container__content-title">Mã đặt chỗ <span class="form-ttdc-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="madc" value="" size="40" maxlength="20" placeholder="Mã đặt chỗ khi đặt vé" class="form-ttdc-container__content-input">
+                                    <p class="form-ttdc-container__content-title">Email <span class="form-ttdc-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="email" value="" size="40" maxlength="50" placeholder="Địa chỉ email khi đặt vé" class="form-ttdc-container__content-input">
+                                    <p class="form-ttdc-container__content-title">Số điện thoại <span class="form-ttdc-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="sdt" value="" size="40" maxlength="11" placeholder="Số điện thoại khi đặt vé" class="form-ttdc-container__content-input">
+                                </div>
+                                <div class="form-ttdc-container__content-btn">
+                                    <input type="button" name="tracuu" value="Tra cứu" class="form-ttdc__btn">
+                                    <a href="http://" class="form-ttdc-container__content-link">Quên mã đặt chỗ?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
         </div>
-
         <footer class="footer">
             <div class="footer-container">
                 <div class="grid">
