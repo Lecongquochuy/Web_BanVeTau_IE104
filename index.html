@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/form-trave.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
 </head>
 <body>
     <div class="app">
@@ -17,7 +18,6 @@
                     <div class="header__log--webname">
                         <a href="#" class="">
                             <img src="./assets/img/logo_tau.png" alt="" class="header__log--webname--logo">
-                            <!-- <div class="logo--name">VÉ TÀU</div> -->
                         </a>
                     </div>
                     <div class="header--info">
@@ -65,9 +65,57 @@
         </header>
 
         <div class="container">
-
+            <div class="grid">
+                <div class="form-container">
+                    <div></div>
+                    <div class="form-trave-container">
+                        <form name="form-trave">
+                            <div class="form-trave-container__title">
+                                <div class="form-trave-container__line-container">
+                                    <div class="form-trave-container__line-container-row-node-container">
+                                        <div class="form-trave-container__line-container-row-node">
+                                            <img src="./assets/img/Active-node.png" alt="">
+                                            <img src="./assets/img/Inactive-node.png" alt="">
+                                            <img src="./assets/img/Inactive-node.png" alt="">
+                                            <img src="./assets/img/Inactive-node.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="form-trave-container__line-container-row-name-container">
+                                        <div class="form-trave-container__line-container-row-name">
+                                            <div class="form-trave-container__line-container-row-name-active">Chọn vé trả</div>
+                                            <div>Xác nhận</div>
+                                            <div>Trả vé</div>
+                                            <div> Hoàn tất</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <h2 class="form-trave__title">TRẢ VÉ TRỰC TUYẾN</h2>
+                                <div class="form-trave-container__title-notice">
+                                    Trả vé trực tuyến chỉ áp dụng với trường hợp khách hàng đã thanh toán trực tuyến (qua cổng thanh toán, ví điện tử, app ngân hàng) và có điền email khi mua vé. <br>
+                                    Nếu quý khách thanh toán bằng tiền mặt, trả sau qua ứng dụng ngân hàng và atm, chuyển khoản hoặc trả vé khi có sự cố bãi bỏ tàu vui lòng thực hiện thủ tục tại các nhà ga, đại lý bán vé.
+                                </div>
+                                <p class="form-trave-container__sub-title">Để hiển thị các vé cần trả, vui lòng điền chính xác 3 thông tin dưới đây :</p>
+                            </div>
+                            <div class="form-trave-container__content">
+                                <div class="form-trave-container__content-login">
+                                    <p class="form-trave-container__content-title">Mã đặt chỗ <span class="form-trave-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="madc" value="" size="40" maxlength="20" placeholder="Mã đặt chỗ khi đặt vé" class="form-trave-container__content-input">
+                                    <p class="form-trave-container__content-title">Email <span class="form-trave-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="email" value="" size="40" maxlength="50" placeholder="Địa chỉ email khi đặt vé" class="form-trave-container__content-input">
+                                    <p class="form-trave-container__content-title">Số điện thoại <span class="form-trave-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="sdt" value="" size="40" maxlength="11" placeholder="Số điện thoại khi đặt vé" class="form-trave-container__content-input">
+                                </div>
+                                <div class="form-trave-container__content-btn">
+                                    <input type="button" name="tracuu" value="Tra cứu" class="form-trave__btn">
+                                    <a href="http://" class="form-trave-container__content-link">Quên mã đặt chỗ?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
         </div>
-
         <footer class="footer">
             <div class="footer-container">
                 <div class="grid">
