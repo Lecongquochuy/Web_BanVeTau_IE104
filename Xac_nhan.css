@@ -1,0 +1,65 @@
+
+/* .background__grey{
+    background-color: rgba(155, 155, 155, 0.1);
+    color: black;
+    margin: 20px;
+} */
+
+.cashback{
+    min-width: 600px;
+    margin: 15px;    
+    max-width: fit-content;
+}
+.ticket__cashback{
+}
+.title--orange{
+    line-height: 25px;
+    text-indent: 10px;
+}
+.tour{
+    line-height: 25px;
+}
+.ticket__cashback--info{
+    display: flex;
+    background-color: rgba(155, 155, 155, 0.1);
+    color: black;
+    margin: 12px;
+    padding: 10px;
+    line-height: 20px;
+}
+.border{
+    border: 1px solid rgba(155, 155, 155, 0.6);
+}
+.ticket__cashback--info div{
+    flex: 1;
+}
+.ticket__cashback--summary{
+    background-color: rgba(155, 155, 155, 0.1);
+    line-height: 25px;
+    padding: 10px;
+}
+.ticket__cashback--summary--row{
+    display: flex;
+}
+.ticket__cashback--summary--row div{
+    flex: 1;
+}
+.cashback__method{
+}
+.cashback__method--check{
+    width: 100%;
+    padding-right: 32%;
+    display: flex;
+    text-indent: 10px;
+    justify-content: space-between;
+}
+
+.check-box{
+    margin: 0;
+    position: relative;
+    top: 3px;
+}
+.button{
+    justify-content: center;
+    margin-top: 20px;
+}

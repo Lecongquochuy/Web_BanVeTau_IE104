@@ -1,0 +1,29 @@
+.slider > .grid{
+    width: 555px;
+}
+.form-trave-container__line-container-row-node-container{
+    margin: 0;
+}
+.form-trave-container__line-container-row-node{
+    gap: 160px;
+}
+.form-trave-container__line-container-row-name-container{
+    padding: 10px 0;
+}
+.form-trave-container__line-container-row-name{
+    gap: 123px;
+}
+.form-trave-container__line-container-row-name-container > div{
+    width: max-content;
+}
+.button{
+    display: inline-block;
+    width: fit-content;
+    border: 1px solid gray;
+}
+.button__content{
+    margin: 0;
+    line-height: normal;
+    padding: 3px;
+    border: none;
+}
