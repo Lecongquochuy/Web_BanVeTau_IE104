@@ -7,6 +7,8 @@
 
 * {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -31,9 +33,43 @@ html {
     flex-wrap: wrap;
 }
 
+.grid__column_1 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 8.3333%;
+}
+.grid__column_4 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 33.3333%;
+}
+.grid__column_10 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 83.3333%;
+}
+
 .btn {
     align-items: center;
     min-width: 146px;
     min-height: 36px;
     text-decoration: none;
 }
+
+.form__title{
+    color: rgb(255, 255, 255);
+    background: linear-gradient(179deg, #00004d 0%, #5333ed 49%, #2cd4d9 100%);
+    width: 200px;
+}
+.form__button{
+    height: 30px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(30, 114, 203);
+    border-radius: 3px;
+    border: 0px
+}
+.form__button:hover{
+    border: 3px solid rgb(30, 0, 255);
+}
+
