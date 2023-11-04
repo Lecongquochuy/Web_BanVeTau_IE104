@@ -6,7 +6,9 @@
     <title>Vé Tàu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
+    <!-- <link rel="stylesheet" href="./assets/css/container.css"> -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/footer.css"> -->
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
 </head>
 <body>
@@ -35,10 +37,10 @@
                 <div class="nav">
                     <ul class="nav__ul">
                         <li>
-                            <a href=""><i class="fas fa-home"></i></a>
+                            <a href="#" class="home-icon"><i class="fas fa-home"></i></a>
                         </li>
                         <li>
-                            <a href="">Tìm vé</a>
+                            <a href="#">Tìm vé</a>
                         </li>
                         <li>
                             <a href="">Thông tin đặt chỗ</a>
@@ -65,8 +67,130 @@
         </header>
 
         <div class="container">
+            <div class="home">
+                <div class="home-background"></div>
+                <div class="grid">
+                    <div class="home-content">
+                        <div class="form-home">
+                            <h2 class="form-home__title">Tìm chuyến tàu</h2>
+                            <div class="form-home__element form-home__departure">
+                                <label class="form-home__element--label">Ga đi</label>
+                                <!-- <div class="form-home__element--input"> -->
+                                <input type="text" class="form-home__element--input input" id="station_departure" list="stationList" placeholder="Ga đi" required>
+                                <datalist id="stationList"></datalist>
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-home__element form-home__destination">
+                                <label class="form-home__element--label">Ga đến</label>
+                                <!-- <div class="form-home__element--input"> -->
+                                <input type="text" class="form-home__element--input input" id="station_destination" list="stationList" placeholder="Ga đến">
+                                <datalist id="stationList"></datalist>
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-home__element form-home__departure-date">
+                                <label class="form-home__element--label">Ngày đi</label>
+                                <!-- <div class="form-home__element--input"> -->
+                                <input type="date" class="form-home__element--input input" id="datePicker" name="date" placeholder="Ngày đi">
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-home__element form-home__passengers-number">
+                                <label class="form-home__element--label">Số lượng hành khách</label>
+                                <!-- <div class="form-home__element--input"> -->
+                                <input type="number" class="form-home__element--input input" placeholder="số lượng hành khách">
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-home__element form-home__return-date">
+                                <label class="form-home__element--label checkbox-btn">
+                                    <input type="checkbox" id="showContent" class="checkbox-btn" onchange="toggleContent()"> Khứ hồi
+                                </label>
+                                <div id="hidenContent" style="display: none">
+                                    <input  type="date" class="form-home__element--input input" id="datePicker-return" name="date" placeholder="Ngày về">
+                                </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-home__element form-home__search-btn">
+                                <label class="form-home__element--label"></label>
+                                <!-- <div class="form-home__element--input btn"> -->
+                                <button class="btn search--btn">Tìm Kiếm</button>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="perfect-trip">
+                            <h2 class="perfect-trip__title">Tuyến tàu ưa thích</h2>
+                            <!-- <div class="slider"> -->
+                            <div class="carousel-container">
+                                <div class="carousel">
+                                    <div class="carousel__element .grid__column_4">
+                                        <img src="./assets/img/nhatrang_saigon.jpg" id="SaiGon_NhaTrang" alt="Hình ảnh 1" >
+                                        <label for="SaiGon_NhaTrang">Tuyến tàu hoả Sài Gòn - Nha Trang</label>
+                                    </div>
+                                    <div class="carousel__element .grid__column_4">
+                                        <img src="./assets/img/PhungHung_HaNoi.jpg" id="PhungHung" alt="Hình ảnh 1" >
+                                        <label for="Phunghung">Đường tàu Phùng Hưng (Hà Nội)</label>
+                                    </div>
+                                    <div class="carousel__element .grid__column_4">
+                                        <img src="./assets/img/DaLat_TraiMat.jpg" id="DaLat_TraiMat" alt="Hình ảnh 1" >
+                                        <label for="DaLat_TraiMat">Đường tàu ga Đà Lạt – Trại Mát</label>
+                                    </div>
+                                    <div class="carousel__element .grid__column_4">
+                                        <img src="./assets/img/Hue_DaNang.avif" id="DaNang_Hue" alt="Hình ảnh 1" >
+                                        <label for="DaNang_Hue">Tuyến tàu Đà Nẵng – Huế</label>
+                                    </div>
+                                    <div class="carousel__element .grid__column_4">
+                                        <img src="./assets/img/DaNang_DongHoi.jpg" id="DaNang_DongHoi" alt="Hình ảnh 1" >
+                                        <label for="DaNang_DongHoi">Tuyến tàu Đà Nẵng – Đồng Hới</label>
+                                    </div>
+                                    <div class="carousel__element .grid__column_4">
+                                        <img src="./assets/img/SaiGon_BinhThuan.jpg" id="SaiGon_BinhThuan" alt="Hình ảnh 1" >
+                                        <label for="SaiGon_BinhThuan">Đường tàu Sài Gòn – Bình Thuận</label>
+                                    </div>
+                                </div>
+                                </div>
+                            <button class="carousel-button btn-pre" onclick="prevSlide()">
+                                <i class="fa-solid fa-angle-left fa-xl"></i>
+                            </button>
+                            <button class="carousel-button btn-next" onclick="nextSlide()">
+                                <i class="fa-solid fa-angle-right fa-xl"></i>
+                            </button>
+                            <!-- </div> -->
+                        </div>
+    
+                        <div class="train-chair">
+                            <h2 class="train-chair__title">Một số loại phòng trên tàu hỏa</h2>
+                            <div class="train-chair__container">
+                                <div class="train-chair__element .grid__column_4">
+                                    <img src="./assets/img/GheCung.jpg" alt="" class="chair-img">
+                                    <label class="chair-label" for="">Ghế ngồi cứng</label>
+                                </div>
+                                <div class="train-chair__element .grid__column_4">
+                                    <img src="./assets/img/GheMem.jpg" alt="" class="chair-img">
+                                    <label class="chair-label" for="">Ghế ngồi mềm</label>
+                                </div>
+                                <div class="train-chair__element .grid__column_4">
+                                    <img src="./assets/img/GiuongNam_khoang6.jpg" alt="" class="chair-img">
+                                    <label class="chair-label" for="">Giường nằm (khoang 6)</label>
+                                </div>
+                                <div class="train-chair__element .grid__column_4">
+                                    <img src="./assets/img/GiuongNam_khoang4.jpg" alt="" class="chair-img">
+                                    <label class="chair-label" for="">Giường nằm (khoang 4)</label>
+                                </div>
+                                <div class="train-chair__element .grid__column_4">
+                                    <img src="./assets/img/GiuongNam_khoang2.jpg" alt="" class="chair-img">
+                                    <label class="chair-label" for="">Giường nằm (khoang 2)</label>
+                                </div>
+                                <div class="train-chair__element .grid__column_4">
+                                    <img src="./assets/img/GhePhu.jpg" alt="" class="chair-img">
+                                    <label class="chair-label" for="">Ghế phụ</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
+        
 
         <footer class="footer">
             <div class="footer-container">
@@ -77,15 +201,15 @@
                             <img src="./assets/img/sales-notice-logo.png" alt="" class="footer-flex-container__box-logo">
                             <h3 class="footer-flex-container__box-title">Theo dõi chúng tôi trên</h3>
                             <div class="footer-flex-icon-container">
-                                <i class="fa-brands fa-facebook footer-flex-container__box-icon" style="color: #005af5;"></i>
-                                <i class="fa-brands fa-youtube footer-flex-container__box-icon" style="color: #ff0019;"></i>
-                                <i class="fa-brands fa-tiktok footer-flex-container__box-icon" style="color: #000000;"></i>
+                                <a href="http://facebook.com" class="facebook"><i class="fa-brands fa-facebook footer-flex-container__box-icon" style="color: #005af5;"></i></a>
+                                <a href="http://youtube.com" class="youtube"><i class="fa-brands fa-youtube footer-flex-container__box-icon" style="color: #ff0019;"></i></a>
+                                <a href="http://tiktok.com" class="tiktok"><i class="fa-brands fa-tiktok footer-flex-container__box-icon" style="color: #000000;"></i></a>    
                             </div>
                         </div>
                         <div class="footer-flex-container-group">
                             <h3 class="footer-flex-container__box-title">TRA CỨU</h3>
                             <div class="group--element">
-                                <a href="http://" class="footer-flex-container__box-content">Tìm vé</a>
+                                <a href="#" class="footer-flex-container__box-content">Tìm vé</a>
                                 <a href="http://" class="footer-flex-container__box-content">Thông tin đặt chỗ</a>
                                 <a href="http://" class="footer-flex-container__box-content">Giờ tàu - Giá vé</a>
                                 <a href="http://" class="footer-flex-container__box-content">Các quy định</a>
@@ -134,5 +258,56 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        var stationList =  document.getElementById("stationList");
+        var stations = [
+            "Hà Nội", "Giáp Bát", "Văn Điển", "Thường Tín", "Chợ Tía", "Vạn Điểm", "Phú Xuyên", "Đồng Văn", "Phủ Lý", "Bình Lục", "Cầu Họ", "Đặng Xá", "Nam Định", "Trình Xuyên", "Núi Gôi", "Cát Đằng", "Ninh Bình",
+            "Cầu Yên", "Ghềnh", "Đồng Giao", "Bỉm Sơn", "Đò Lèn", "Nghĩa Trang", "Thanh Hóa",
+            "Yên Thái", "Minh Khôi", "Thị Long", "Văn Trai", "Khoa Trường", "Trường Lâm", "Hoàng Mai", "Cầu Giát", "Yên Lý", "Chợ Sy", "Mỹ Lý", "Quán Hành", "Vinh",
+            "Yên Xuân", "Yên Trung", "Đức Lạc", "Yên Duệ", "Hòa Duyệt", "Thanh Luyện", "Chu Lễ", "Hương Phố", "Phúc Trạch", "La Khê", "Tân Ấp", "Đồng Chuối", "Kim Lũ", "Đồng Lê", "Ngọc Lâm", "Lạc Sơn", "Lệ Sơn", "Minh Lệ", "Ngân Sơn", "Thọ Lộc", "Hoàn Lão", "Phúc Tự", "Đồng Hới",
+            "Lệ Kỳ", "Long Đại", "Mỹ Đức", "Phú Hòa", "Mỹ Trạch", "Thượng Lâm", "Sa Lung", "Tiên An", "Hà Thanh", "Đông Hà", "Quảng Trị", "Diên Sanh", "Mỹ Chánh", "Phò Trạch", "Hiền Sỹ", "Văn Xá", "Huế",
+            "Hương Thủy", "Truồi", "Cầu Hai", "Thừa Lưu", "Lăng Cô", "Hải Vân Bắc", "Hải Vân", "Hải Vân Nam", "Kim Liên", "Thanh Khê", "Đà Nẵng",
+            "Lệ Trạch", "Nông Sơn", "Trà Kiệu", "Phú Cang", "An Mỹ", "Tam Kỳ", "Diêm Phổ", "Núi Thành", "Trị Bình", "Bình Sơn", "Đại Lộc", "Quảng Ngãi",
+            "Hòa Vinh Tây", "Mộ Đức", "Thạch Trụ", "Đức Phổ", "Thủy Trạch", "Sa Huỳnh", "Tam Quan", "Bồng Sơn", "Vạn Phú", "Phù Mỹ", "Khánh Phước", "Phù Cát", "Bình Định", "Quy Nhơn", "Diêu Trì",
+            "Tân Vinh", "Vân Canh", "Phước Lãnh", "La Hai", "Chí Thạnh", "Hòa Đa", "Tuy Hòa", "Đông Tác", "Phú Hiệp", "Hảo Sơn", "Đại Lãnh", "Tu Bông", "Giã", "Hòa Huỳnh", "Ninh Hòa", "Phong Thạnh", "Lương Sơn", "Nha Trang",
+            "Cây Cầy", "Hòa Tân", "Suối Cát", "Ngã Ba", "Kà Rôm", "Phước Nhơn", "Tháp Chàm", "Hòa Trinh", "Cà Ná", "Vĩnh Hảo", "Sông Lòng Sông", "Sông Mao", "Châu Hanh", "Sông Lũy", "Long Thạnh", "Ma Lâm", "Phan Thiết", "Bình Thuận",
+            "Suối Vận", "Sông Phan", "Sông Dinh", "Suối Kiết", "Gia Huynh", "Trản Táo", "Gia Ray", "Bảo Chánh", "Long Khánh", "Dầu Giây", "Trảng Bom", "Hố Nai", "Biên Hòa", "Dĩ An", "Sóng Thần", "Bình Triệu", "Gò Vấp", "Sài Gòn"
+        ];
+        stations.forEach( function(station) {
+            var option = document.createElement("option");
+            option.value = station;
+            stationList.appendChild(option);
+        });
+
+        // show content
+        function toggleContent()
+        {
+            var content = document.getElementById("hidenContent");
+            if (content.style.display === "none")
+                content.style.display = "block";
+            else
+                content.style.display = "none";
+        }
+
+        // control carousel
+        let currentIndex = 0;
+        const carousel = document.querySelector('.carousel');
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % carousel.children.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const translateValue = -currentIndex * 365;
+            carousel.style.transform = `translateX(${translateValue}px)`;
+        }
+    </script>
 </body>
 </html>
