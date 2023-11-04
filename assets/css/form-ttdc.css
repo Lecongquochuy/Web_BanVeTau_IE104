@@ -76,3 +76,76 @@
 .form-ttdc__btn:hover{
     border: 1px solid rgb(30, 0, 255);
 }
+.title--orange{
+    color: orange;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+.form-ttdc-booking__info{
+    width: 100%;
+    padding: 10px;
+    max-width: fit-content;
+}
+.form-ttdc-booking__info--ticket{
+    border-collapse: collapse;
+}
+.form-ttdc-booking__info--ticket td{
+    border: 1px solid rgba(155, 155, 155, 0.5);
+    padding: 3px;
+}
+td.title--orange{
+    border: none;
+}
+.form-ttdc-color--gray{
+    color: rgb(90, 88, 88);
+    text-align: center;
+}
+.form-ttdc-guest__name{
+    width: 120px;
+}
+.form-ttdc-ticket__info{
+    width: 150px;
+}
+.form-ttdc-cash__type{
+    width: 100px;
+}
+.form-ttdc-booking__info--ticket__row1 td{
+    background-color: rgba(155, 155, 155, 0.3);
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.form-ttdc-tour{
+    background-color: #d9edf7;   
+    color: rgb(77, 77, 243);
+    height: 25px;
+    text-indent: 10px;
+}
+.form-ttdc-notice{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 50px;
+    height: 50px;
+    line-height: 15px;
+    margin-bottom: 50px;
+    font-size: 13px;
+    color: #3a87ad;
+}
+.form-ttdc-ticket-booking-info{
+    line-height: 20px;
+    padding-top: 20px;
+    margin: 15px 10px;
+}
+.form-ttdc-ticket-booking-info__row{
+    display: flex;
+    margin-left: 5px;
+}
+.form-ttdc-ticket-booking-info__col{
+    display: flex;
+    flex: 1;
+}
+.form-ttdc-ticket-booking-info__col div{
+    display: flex;
+    flex: 1;
+}
