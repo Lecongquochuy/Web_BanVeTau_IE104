@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé Tàu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/form-trave.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <div class="header__log">
+                    <div class="header__log--webname">
+                        <a href="#" class="">
+                            <img src="./assets/img/logo_tau.png" alt="" class="header__log--webname--logo">
+                        </a>
+                    </div>
+                    <div class="header--info">
+                        <div class="header__log--btn" id="help">
+                            <a href=""><i class="far fa-question-circle"></i> Hỗ trợ</a>
+                        </div>
+                        <div class="header__log--btn" id="signin">
+                            <a href=""><i class="fas fa-user-circle"></i> Đăng nhập</a>
+                        </div>
+                        <div class="header__log--btn" id="signup">
+                            <a href=""><i class="far fa-user-circle"></i> Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul class="nav__ul">
+                        <li>
+                            <a href=""><i class="fas fa-home"></i></a>
+                        </li>
+                        <li>
+                            <a href="">Tìm vé</a>
+                        </li>
+                        <li>
+                            <a href="">Thông tin đặt chỗ</a>
+                        </li>
+                        <li>
+                            <a href="">Trả vé</a>
+                        </li>
+                        <li>
+                            <a href="">Giờ Tàu - Giá vé</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__more">More</a>
+                            <ul class="nav__more">
+                                <li><a href="">Quy định</a></li>
+                                <li><a href="">Hướng dẫn</a></li>
+                                <li><a href="">Liên hệ</a></li>
+                                <li><a href="">Đại lý</a></li>
+                                <li><a href="">Nhà ga</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid">
+                <div class="form-container">
+                    <div class="form-trave-container" id="chonvetra">
+                        <form name="form-trave">
+                            <div class="form-trave-container__title">
+                                <div class="form-trave-container__line-container">
+                                    <div class="form-trave-container__line-container-row-node-container">
+                                        <div class="form-trave-container__line-container-row-node">
+                                            <img src="./assets/img/Active-node.png" alt="">
+                                            <img src="./assets/img/Inactive-node.png" alt="">
+                                            <img src="./assets/img/Inactive-node.png" alt="">
+                                            <img src="./assets/img/Inactive-node.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="form-trave-container__line-container-row-name-container">
+                                        <div class="form-trave-container__line-container-row-name">
+                                            <div class="form-trave-container__line-container-row-name-active">Chọn vé
+                                                trả</div>
+                                            <div>Xác nhận</div>
+                                            <div>Trả vé</div>
+                                            <div> Hoàn tất</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="form-trave__title">TRẢ VÉ TRỰC TUYẾN</h2>
+                                <div class="form-trave-container__title-notice">
+                                    Trả vé trực tuyến chỉ áp dụng với trường hợp khách hàng đã thanh toán trực tuyến
+                                    (qua cổng thanh toán, ví điện tử, app ngân hàng) và có điền email khi mua vé. <br>
+                                    Nếu quý khách thanh toán bằng tiền mặt, trả sau qua ứng dụng ngân hàng và atm,
+                                    chuyển khoản hoặc trả vé khi có sự cố bãi bỏ tàu vui lòng thực hiện thủ tục tại các
+                                    nhà ga, đại lý bán vé.
+                                </div>
+                                <p class="form-trave-container__sub-title">Để hiển thị các vé cần trả, vui lòng điền
+                                    chính xác 3 thông tin dưới đây :</p>
+                            </div>
+                            <div class="form-trave-container__content">
+                                <div class="form-trave-container__content-login">
+                                    <p class="form-trave-container__content-title">Mã đặt chỗ <span
+                                            class="form-trave-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="madc" value="" size="40" maxlength="20"
+                                        placeholder="Mã đặt chỗ khi đặt vé" class="form-trave-container__content-input"
+                                        id="trave_madc">
+                                    <p class="form-trave-container__content-title">Email <span
+                                            class="form-trave-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="email" value="" size="40" maxlength="50"
+                                        placeholder="Địa chỉ email khi đặt vé"
+                                        class="form-trave-container__content-input" id="trave_email">
+                                    <p class="form-trave-container__content-title">Số điện thoại <span
+                                            class="form-trave-container__content-asterisk--color">*</span></p>
+                                    <input type="text" name="sdt" value="" size="40" maxlength="11"
+                                        placeholder="Số điện thoại khi đặt vé"
+                                        class="form-trave-container__content-input" id="trave_sdt">
+                                </div>
+                                <div class="form-trave-container__content-btn">
+                                    <input type="button" name="tracuu" value="Tra cứu" class="form-trave__btn"
+                                        id="trave_btn">
+                                    <a href="#" class="form-trave-container__content-link" id="trave_link">Quên mã đặt
+                                        chỗ?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-laymdc-container" id="laymdc">
+                        <form name="form-laymdc">
+                            <div class="form-laymdc-container__title">
+                                <h2 class="form-laymdc__title">LẤY LẠI MÃ ĐẶT CHỖ</h2>
+                                <p class="form-laymdc-container__sub-title">Nhắn tin theo cú pháp VTBC gửi tới 8200 hoặc
+                                    nhập email để lấy lại Mã đặt chỗ.</p>
+                            </div>
+                            <div class="form-laymdc-container__content">
+                                <div class="form-laymdc-container__content-title">Email</div>
+                                <div class="form-laymdc-container__content-function">
+                                    <input type="text" name="email" value="" size="40" maxlength="50"
+                                        placeholder="Địa chỉ email khi đặt vé"
+                                        class="form-laymdc-container__content-input" id="laymdc_email">
+                                    <input type="button" name="nhanlaima" value="Nhận lại mã" class="form-laymdc__btn"
+                                        id="laymdc_btn">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="booking__info" id="xacnhan_1">
+                        <div class="form-trave-container__line-container">
+                            <div class="form-trave-container__line-container-row-node-container">
+                                <div class="form-trave-container__line-container-row-node">
+                                    <img src="./assets/img/Inactive-node.png" alt="">
+                                    <img src="./assets/img/Active-node.png" alt="">
+                                    <img src="./assets/img/Inactive-node.png" alt="">
+                                    <img src="./assets/img/Inactive-node.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-trave-container__line-container-row-name-container">
+                                <div class="form-trave-container__line-container-row-name">
+                                    <div>Chọn vé trả</div>
+                                    <div class="form-trave-container__line-container-row-name-active">Xác nhận</div>
+                                    <div>Trả vé</div>
+                                    <div> Hoàn tất</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice">
+                            <p>Vui lòng chọn các vẻ cần trả. Tiền hoàn lại khi trả về của quý khách sẽ được về tài khoản
+                                đã được dùng khi thanh toán mua về thành công.</p>
+                        </div>
+                        <div>
+                            <table class="booking__info--ticket">
+                                <tr>
+                                    <td colspan="9" class="title--orange">Các giao dịch thành công</td>
+                                </tr>
+                                <tr class="booking__info--ticket__row1">
+                                    <td>#</td>
+                                    <td class="guest__name">Họ tên</td>
+                                    <td class="ticket__info">Thông tin vé</td>
+                                    <td>Thành tiền (VNĐ)</td>
+                                    <td class="cash__type">Loại trả vé</td>
+                                    <td>Lệ phí trả vé</td>
+                                    <td>Tiền trả lại</td>
+                                    <td>Thông tin vé trả</td>
+                                    <td class="check">Chọn vé trả</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="9" class="tour">Hà Nội - Sài Gòn 04/01/2021</td>
+                                </tr>
+                                <tr class="color--gray">
+                                    <td>1</td>
+                                    <td>
+                                        <p class="bold--black">ngo thanh huong</p>
+                                        <p>Người lớn</p>
+                                        <p>Số giấy tờ: 32423434</p>
+                                    </td>
+                                    <td>
+                                        <p>SE7 04/01/21 06:00</p>
+                                        <p>Toa: 1 chỗ số: 24</p>
+                                        <p>Ngôi mềm điều hòa</p>
+                                        <p>Mã vé: 101861338</p>
+                                    </td>
+                                    <td>1,014,000</td>
+                                    <td>Bình thường</td>
+                                    <td>101,000</td>
+                                    <td>913,000</td>
+                                    <td></td>
+                                    <td><input type="checkbox" class="check-box" id="ck_1"></td>
+                                </tr>
+                                <tr class="color--gray">
+                                    <td>2</td>
+                                    <td>
+                                        <p class="bold--black">ngo tran minh</p>
+                                        <p>Người lớn</p>
+                                        <p>Số giấy tờ: 23432434</p>
+                                    </td>
+                                    <td>
+                                        <p>SE7 04/01/21 06:00</p>
+                                        <p>Toa: 1 chỗ số: 21</p>
+                                        <p>Ngôi mềm điều hòa</p>
+                                        <p>Mã vé: 101861335</p>
+                                    </td>
+                                    <td>1,014,000</td>
+                                    <td>Bình thường</td>
+                                    <td>101,000</td>
+                                    <td>913,000</td>
+                                    <td>Vé đã trả lại.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="9" class="tour">Sài Gòn - Hà Nội 09/01/2021</td>
+                                </tr>
+                                <tr class="color--gray">
+                                    <td>1</td>
+                                    <td>
+                                        <p class="bold--black">ngo thanh huong</p>
+                                        <p>Người lớn</p>
+                                        <p>Số giấy tờ: 32423434</p>
+                                    </td>
+                                    <td>
+                                        <p>SE8 09/01/21 06:00</p>
+                                        <p>Toa: 1 chỗ số: 41</p>
+                                        <p>Ngôi mềm điều hòa</p>
+                                        <p>Mã vé: 102002180</p>
+                                    </td>
+                                    <td>823,000</td>
+                                    <td>Bình thường</td>
+                                    <td>123,000</td>
+                                    <td>700,000</td>
+                                    <td>Vé đã trả lại.</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="color--gray">
+                                    <td>2</td>
+                                    <td>
+                                        <p class="bold--black">ngo tran minh</p>
+                                        <p>Người lớn</p>
+                                        <p>Số giấy tờ: 23432434</p>
+                                    </td>
+                                    <td>
+                                        <p>SE8 09/01/21 06:00</p>
+                                        <p>Toa: 1 cho số: 44</p>
+                                        <p>Ngồi mềm điều hòa</p>
+                                        <p>Mã vé: 102002183</p>
+                                    </td>
+                                    <td>823,000</td>
+                                    <td>Bình thường</td>
+                                    <td>123,000</td>
+                                    <td>700,000</td>
+                                    <td>[khuyến mại khứ hồi] trả từ [1 ngày] đến [3000 ngày] áp dụng 15%</td>
+                                    <td><input type="checkbox" class="check-box" id="ck_2"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="ticket-booking-info">
+                            <div class="title--orange">Thông tin người đặt vé</div>
+                            <div class="ticket-booking-info__row color--gray">
+                                <div class="ticket-booking-info__col">
+                                    <div>Họ và tên</div>
+                                    <div>ngo thanh huong</div>
+                                </div>
+                                <div class="ticket-booking-info__col">
+                                    <div>Email</div>
+                                    <div>email@email.com</div>
+                                </div>
+                            </div>
+                            <div class="ticket-booking-info__row color--gray">
+                                <div class="ticket-booking-info__col">
+                                    <div>Số CMND/Hộ chiếu</div>
+                                    <div>32423434</div>
+                                </div>
+                                <div class="ticket-booking-info__col">
+                                    <div>Số điện thoại</div>
+                                    <div>0983456789</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_chonvetra">
+                            <div class="button_chonvetra__content">
+                                <a href="" id="trave_request">Yêu cầu trả vé</a>
+                                <!-- <input type="button" value="Yêu cầu trả vé" id="trave_request"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cashback" id="xacnhan_2">
+                        <div class="ticket__cashback">
+                            <div class="form-trave-container__line-container">
+                                <div class="form-trave-container__line-container-row-node-container">
+                                    <div class="form-trave-container__line-container-row-node">
+                                        <img src="./assets/img/Inactive-node.png" alt="">
+                                        <img src="./assets/img/Active-node.png" alt="">
+                                        <img src="./assets/img/Inactive-node.png" alt="">
+                                        <img src="./assets/img/Inactive-node.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="form-trave-container__line-container-row-name-container">
+                                    <div class="form-trave-container__line-container-row-name">
+                                        <div>Chọn vé trả</div>
+                                        <div class="form-trave-container__line-container-row-name-active">Xác nhận</div>
+                                        <div>Trả vé</div>
+                                        <div> Hoàn tất</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title--orange">Danh sách các vé chọn trả</div>
+                            <div class="border">
+                                <div class="tour">Hà Nội - Sài Gòn 04/04/2021</div>
+                                <div class="ticket__cashback--info">
+                                    <div>
+                                        <p>- Họ tên : ngo thanh huong</p>
+                                        <p>- Tàu SE7 Toa: 1 chỗ số: 24</p>
+                                        <p>- Lệ phí trả vé : 101,000</p>
+                                    </div>
+                                    <div>
+                                        <p>- Số giấy tờ : 32423434</p>
+                                        <p>- Tiền vé: 1,014,000 VNĐ</p>
+                                        <p>- Tiền trả: 913,000 VNĐ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border">
+                                <div class="tour">Sài Gòn - Hà Nội 09/04/2020</div>
+                                <div class="ticket__cashback--info">
+                                    <div>
+                                        <p>- Họ tên: ngo tran minh</p>
+                                        <p>- Tàu SE8 Toa: 1 chỗ số: 44</p>
+                                        <p>- Lệ phí trả vẻ : 123,000</p>
+                                    </div>
+                                    <div>
+                                        <p>- Số giấy tờ : 23432434</p>
+                                        <p>- Tiền vé: 823,000 VNĐ</p>
+                                        <p>- Tiền trả: 700,000 VNĐ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket__cashback--summary">
+                                <div class="ticket__cashback--summary--row">
+                                    <div>Tổng vé: 2</div>
+                                    <div>Tổng tiền vé: 1,837,000 VNĐ</div>
+                                </div>
+                                <div class="ticket__cashback--summary--row">
+                                    <div>Tổng lệ phí: 224,000 VNĐ</div>
+                                    <div>Tổng tiền trả: 1,613,000 VNĐ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cashback__method">
+                            <div class="title--orange">Phương thức nhận mã xác thực trả vé</div>
+                            <div>
+                                <form class="cashback__method--check">
+                                    <div>
+                                        <input type="radio" name="method" class="check-box" id="radio_1">
+                                        <label for="email"> Email: email@email.com</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="method" class="check-box" id="radio_2">
+                                        <label for="sdt"> Số điện thoại: 0983456789</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="button_xacnhan">
+                            <div class="button_xacnhan__content">
+                                <a href="" id="trave_confirm">Xác nhận</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="done" id="hoantat">
+                        <div class="form-trave-container__line-container">
+                            <div class="form-trave-container__line-container-row-node-container">
+                                <div class="form-trave-container__line-container-row-node">
+                                    <img src="./assets/img/Inactive-node.png" alt="">
+                                    <img src="./assets/img/Inactive-node.png" alt="">
+                                    <img src="./assets/img/Inactive-node.png" alt="">
+                                    <img src="./assets/img/Active-node.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-trave-container__line-container-row-name-container">
+                                <div class="form-trave-container__line-container-row-name">
+                                    <div>Chọn vé trả</div>
+                                    <div>Xác nhận</div>
+                                    <div>Trả vé</div>
+                                    <div class="form-trave-container__line-container-row-name-active"> Hoàn tất</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-trave-container__done-notice">
+                            Giao dịch hoàn tất. Quý khách vui lòng kiểm tra hòm thư tại địa chỉ email hoặc tin nhắn trên
+                            số điện thoại
+                            đã dùng mua vé để xem thông báo trả vé thành công. Tiền sẽ được hoàn trả trong thời gian sớm
+                            nhất.
+                            Mọi thắc mắc vui lòng liên hệ <a href="">tại đây</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="grid">
+                    <div class="footer-flex-container">
+                        <div class="footer-flex-container-group">
+                            <img src="./assets/img/web-logo.png" alt="" class="footer-flex-container__box-logo"> <br>
+                            <img src="./assets/img/sales-notice-logo.png" alt=""
+                                class="footer-flex-container__box-logo">
+                            <h3 class="footer-flex-container__box-title">Theo dõi chúng tôi trên</h3>
+                            <div class="footer-flex-icon-container">
+                                <i class="fa-brands fa-facebook footer-flex-container__box-icon"
+                                    style="color: #005af5;"></i>
+                                <i class="fa-brands fa-youtube footer-flex-container__box-icon"
+                                    style="color: #ff0019;"></i>
+                                <i class="fa-brands fa-tiktok footer-flex-container__box-icon"
+                                    style="color: #000000;"></i>
+                            </div>
+                        </div>
+                        <div class="footer-flex-container-group">
+                            <h3 class="footer-flex-container__box-title">TRA CỨU</h3>
+                            <div class="group--element">
+                                <a href="http://" class="footer-flex-container__box-content">Tìm vé</a>
+                                <a href="http://" class="footer-flex-container__box-content">Thông tin đặt chỗ</a>
+                                <a href="http://" class="footer-flex-container__box-content">Giờ tàu - Giá vé</a>
+                                <a href="http://" class="footer-flex-container__box-content">Các quy định</a>
+                            </div>
+                        </div>
+                        <div class="footer-flex-container-group">
+                            <h3 class="footer-flex-container__box-title">THÔNG TIN LIÊN HỆ</h3>
+                            <div class="group--element">
+                                <a href="http://" class="footer-flex-container__box-content">Hướng dẫn</a>
+                                <a href="http://" class="footer-flex-container__box-content">Liên hệ</a>
+                                <a href="http://" class="footer-flex-container__box-content">Đăng ký hội viên</a>
+                                <a href="http://" class="footer-flex-container__box-content">Về chúng tôi</a>
+                            </div>
+                        </div>
+                        <div class="footer-flex-container-group">
+                            <h3 class="footer-flex-container__box-title">KHÁC</h3>
+                            <div class="group--element">
+                                <a href="http://" class="footer-flex-container__box-content">Các đơn vị hợp tác</a>
+                                <a href="http://" class="footer-flex-container__box-content">Tuyển dụng</a>
+                            </div>
+                            <h3 class="footer-flex-container__box-title">ĐỐI TÁC THANH TOÁN</h3>
+                            <div class="footer__bank-logo">
+                                <img src="./assets/img/Logo_ACB.webp" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Agribank.webp" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_BIDV.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_OCB.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Sacombank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Techcombank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_TPBank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Vietcombank.webp" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_VPbank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="footer__hr">
+                <div class="footer-relative-container">
+                    <div class="footer_address">
+                        Tổng công ty Đường sắt Việt Nam. Số 118 Lê Duẩn, Hoàn Kiếm, Hà Nội.
+                    </div>
+                    <div class="footer__copyright">
+                        Copyright &copy; 2023 Tổng công ty Đường sắt Việt Nam
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var trave_link = document.getElementById("trave_link");
+        var chonvetra = document.getElementById("chonvetra");
+        var laymdc = document.getElementById("laymdc");
+        var laymdc_btn = document.getElementById("laymdc_btn");
+        var trave_btn = document.getElementById("trave_btn");
+        var xacnhan_1 = document.getElementById("xacnhan_1");
+        var xacnhan_2 = document.getElementById("xacnhan_2");
+        var hoantat = document.getElementById("hoantat");
+        var trave_request = document.getElementById("trave_request");
+        var trave_confirm = document.getElementById("trave_confirm");
+
+        trave_link.addEventListener("click", function () {
+            chonvetra.style.display = "none";
+            laymdc.style.display = "block";
+        });
+        laymdc_btn.addEventListener("click", function () {
+            confirm("Mã đặt chỗ đã được gửi, vui lòng kiểm tra hộp thư của Email đã nhập!!!")
+            chonvetra.style.display = "block";
+            laymdc.style.display = "none";
+        });
+        trave_btn.addEventListener("click", function () {
+            var trave_madc = document.getElementById("trave_madc").value;
+            var trave_email = document.getElementById("trave_email").value;
+            var trave_sdt = document.getElementById("trave_sdt").value;
+            if (trave_madc === "070112" && trave_email === "email@email.com" && trave_sdt === "0983456789") {
+                chonvetra.style.display = "none";
+                xacnhan_1.style.display = "block";
+            }
+            else {
+                confirm("Mã đặt chỗ không hợp lệ hoặc \nemail và số điện thoại đã nhập không thực hiện giao dịch bao giờ!!!")
+            }
+        });
+        trave_request.addEventListener("click", function (e) {
+            e.preventDefault();
+            var check_1 = document.getElementById("ck_1").checked;
+            var check_2 = document.getElementById("ck_2").checked;
+            if ((check_1 === true) && (check_2 === true)) {
+                xacnhan_1.style.display = "none";
+                xacnhan_2.style.display = "block";
+            }
+            else {
+                confirm("Vui lòng chọn vé cần trả!!!");
+            }
+        });
+        trave_confirm.addEventListener("click", function (e) {
+            e.preventDefault();
+            var radio_1 = document.getElementById("radio_1").checked;
+            var radio_2 = document.getElementById("radio_2").checked;
+            if (radio_1 === true || radio_2 === true){
+                xacnhan_2.style.display = "none";
+                hoantat.style.display = "block";
+            }
+            else {
+                confirm("Vui lòng chọn phương thức xác thực trả vé")
+            }
+        });
+    </script>
+</body>
+
+</html>
