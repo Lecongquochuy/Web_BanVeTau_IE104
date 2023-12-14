@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="app">
-        <!-- <header class="header">
+        <header class="header">
             <div class="grid">
                 <div class="header__log">
                     <div class="header__log--webname">
@@ -62,7 +62,7 @@
                     </ul>
                 </div>
             </div>
-        </header> -->
+        </header>
 
         <div class="container">
             <div class="grid">
@@ -102,7 +102,7 @@
                                             <td>Thông tin vé</td>
                                             <td class="form-ttdc-cash__type">Thành tiền (VNĐ)</td>
                                             <td>Trạng thái</td>
-                                            <td>Tải vé</td>
+                                            <td>Lấy vé</td>
                                         </tr>
                                         <tr>
                                             <td colspan="9" class="form-ttdc-tour">Hà Nội - Sài Gòn 04/01/2021</td>
@@ -123,7 +123,7 @@
                                             </td>
                                             <td>670,000</td>
                                             <td>Đã thanh toán.</td>
-                                            <td><a href="http://">Tải vé</a></td>
+                                            <td><a href="#" id="take_ticket" class="form-ttdc-ticket-booking-info__link">Lấy vé</a></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -177,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="footer-container">
                 <div class="grid">
                     <div class="footer-flex-container">
@@ -241,7 +241,7 @@
                     </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </div>
     <script>
         var ttdc_detail = document.getElementById("ttdc_detail");
@@ -250,6 +250,7 @@
         var ttdc = document.getElementById("ttdc");
         var laymdc = document.getElementById("laymdc");
         var laymdc_btn = document.getElementById("laymdc_btn");
+        var take_ticket = document.getElementById("take_ticket");
 
         ttdc_btn.addEventListener("click", function(){
             var ttdc_madc = document.getElementById("ttdc_madc").value;
@@ -266,6 +267,10 @@
         ttdc_link.addEventListener("click", function(){
             ttdc.style.display = "none";
             laymdc.style.display = "block";
+        });
+        take_ticket.addEventListener("click", function(e){
+            e.preventDefault();
+            confirm("Vé đã được gửi qua Email!!!")
         });
         laymdc_btn.addEventListener("click", function(){
             confirm("Mã đặt chỗ đã được gửi, vui lòng kiểm tra hộp thư của Email đã nhập!!!")
