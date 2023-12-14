@@ -151,6 +151,14 @@ td.title--orange{
     display: flex;
     flex: 1;
 }
+.form-ttdc-ticket-booking-info__link{
+    text-decoration: none;
+    color: #2fa4e7;
+}
+.form-ttdc-ticket-booking-info__link:hover{
+    text-decoration: underline;
+    color: aqua;
+}
 .form-laymdc-container{
     display: none;
     padding: 10px 0px;
