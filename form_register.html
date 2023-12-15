@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- <div class="form">
+        
+    </div> -->
+    <!-- <form action="" class="form__login"></form> -->
+
+    <div class="form_register">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <!-- form login và register / authen form ( form xác thực) -->
+                <div class="auth-form">
+                    <div class="auth-form__header">
+                        <h3 class="btn auth-form_part-head auth-form__login">Đăng nhập</h3>
+                        <h3 class="btn auth-form_part-head auth-form__register">Đăng ký</h3>
+                    </div>
+                    
+                    <div class="auth-form__form">
+                        <!-- <div class="auth-form__group auth-form__group--des">Đăng nhập với tài khoản vé tàu</div> -->
+                        <div class="auth-form__group auth-form__group-infor">
+                            <input type="text" class="auth-form__input" placeholder="Họ" required name="Name">
+                            <input type="text" class="auth-form__input" placeholder="Tên" required name="Name">
+                        </div>
+                        <div class="auth-form__group auth-form__group-infor">
+                            <input type="mail" class="auth-form__input" placeholder="abc@gmail.com" required name="Email">
+                            <input type="phonenumber" class="auth-form__input" placeholder="Số điện thoại" required name="phonenumber">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu" required name="password">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" required name="password">
+                        </div>
+                        <div class="auth-form__group auth-form__aside">
+                            <div class="auth-form__policy-text">
+                                <input type="checkbox" class="auth-form__input auth-form__checkbox" name="remember-me">
+                                Tôi đồng ý với tất cả các  
+                                <a href="#" class="auth-form__policy-link">Điều khoản</a> và
+                                <a href="#" class="auth-form__policy-link">Chính sách quyền riêng tư</a>
+                            </div>
+                            <!-- <div class="remember">
+                                
+                                Tôi đồng ý với tất cả các Điều khoản và Chính sách quyền riêng tư
+                            </div> -->
+                            <!-- <div class="forgot-password">
+                                <a href="#"  class="auth-form__input btn-forgot-pass">Quên mật khẩu?</a>
+                            </div> -->
+                            <!-- <input type="submit" value="Quên mật khẩu"> -->
+                        </div>
+                        <div class="auth-form__controls">
+                            <button class="btn btn--login">Tạo tài khoản</button>
+                        </div>
+                        <div class="other_login">
+                            <div class="hr"><hr></div>
+                            <div class="element">Đăng ký với</div>
+                            <div class="hr"><hr></div>
+                        </div>
+                        <div class="auth-form__socials">
+                            <div id="facebook" class="btn-icon">
+                                <a href="https://www.facebook.com" class="btn btn-with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-facebook" style="color: #005eff;"></i>
+                                </a>
+                            </div>
+                            <div id="google" class="btn-icon">
+                                <a href="https://www.google.com" class="btn btn-with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-google" style="color: #ff0000;"></i>
+                                </a>
+                            </div>
+                            <div id="apple" class="btn-icon">
+                                <a href="https://www.youtube.com" class="btn btn-with-icon">
+                                    <i class="auth-form__socials-icon fa-brands fa-apple" style="color: #000000;"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
