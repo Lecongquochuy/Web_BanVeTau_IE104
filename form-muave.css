@@ -1,0 +1,350 @@
+.form-container{
+    padding: 50px 50px;
+    position: relative;
+    margin: 70px 0px;
+    min-height: 600px;
+}
+.form-muave-container{
+    padding: 10px 0px;
+}
+.form-muave-container__title{
+    margin: 10px 0px;
+}
+.form-trave-container__line-container{
+    height: 20px;
+    border-bottom: 2px solid #d3d3d3;
+    margin-bottom: 60px;
+    display: block;
+}
+.form-trave-container__line-container-row-node-container{
+    margin: 0px 60px;
+}
+.form-trave-container__line-container-row-node{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 170px;
+    top: 10px;
+    left: 45px;
+}
+.form-trave-container__line-container-row-name-container{
+    padding: 20px 25px;
+    font-size: 15px;
+    text-align: center;
+}
+.form-trave-container__line-container-row-name{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 100px;
+}
+.form-trave-container__line-container-row-name-active{
+    color: #3a87ad;
+}
+.form-muave__title{
+    color: rgb(255, 255, 255);
+    background-color: #0082c4;
+    width: fit-content;
+    margin: 5px 0px;
+}
+.form-muave-container__title-notice{
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    border-radius: 5px;
+    color: #3a87ad;
+    padding: 15px 15px;
+    margin-top: 10px 0px;
+    font-size: 15px;
+}
+.form-muave-container__ticket{
+    margin-top: 30px;
+}
+.buying__info--ticket{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}
+.buying__info--ticket td{
+    border: 1px solid rgba(155, 155, 155, 0.5);
+    padding: 5px 10px; 
+}
+.buying__info--ticket__row1{
+    background-color: lavender;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+.buying__info--ticket-title-ttht{
+    width: 120px;
+}
+.buying__info--ticket-title-ttc{
+    width: 100px;
+}
+.buying__info--ticket-title-ticket-cost{
+    width: 100px;
+}
+.buying__info--ticket-title-km{
+    width: 220px;
+}
+.buying__info--ticket-title-tt{
+    width: 95px;
+}
+.buying__info--ticket__row2{
+    background-color: #dbedf7;
+    color: #0082c0;
+    font-weight: bold;
+    font-size: 14px;
+}
+.buying__info--ticket-td-align-center{
+    text-align: center;
+}
+.buying__info--ticket-td-align-right{
+    text-align: right;
+}
+.buying__info--ticket-input-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 5px;
+}
+.buying__info--ticket-label{
+    padding: 3px 0px;
+    width: 60px;
+}
+.buying__info--ticket-input{
+    padding: 3px 3px;
+}
+.customer-info{
+    line-height: 20px;
+    margin: 15px 0 10px;
+    font-size: 14px;
+}
+.title--orange{
+    color: orange;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+.form-muave-container__customer{
+    margin-top: 30px;
+}
+.customer-info__content{
+    margin-top: 10px;
+    background-color: #ececec;
+    border: none;
+    padding: 15px 15px;
+}
+.customer-info__content-notice{
+    margin-bottom: 10px;
+    color: #3a87ad;
+    font-size: 15px;
+}
+.customer-info__content-input-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    gap: 10px;
+}
+.customer-info__content-label{
+   padding: 3px 0px;
+   font-size: 13px;
+}
+.form-trave-container__content-asterisk--color{
+    color: rgb(255, 0, 0);
+}
+.customer-info__content-input{
+    padding: 3px 8px;
+    font-size: 13px;
+}
+.form-muave-container__e-bill{
+    margin-top: 30px;
+}
+.e-bill__content{
+    margin-top: 5px;
+}
+.e-bill__content-notice{
+    margin-bottom: 10px;
+    color: red;
+    font-size: 15px;
+}
+.e-bill__content-input-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.e-bill__content-input-box2{
+    display: grid;
+    grid-template-columns: 0.42fr 3fr;
+    gap: 10px;
+}
+.form-muave-container__payment{
+    margin-top: 30px;
+}
+.payment-box1{
+    margin-top: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.payment-box2{
+    border: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.payment__check-box{
+    height: 110px;
+}
+.payment__bank-logo{
+    height: 120px;
+    width: 175px;
+    padding: 10px 8px;
+}
+.payment__content{
+    display: inline-block;
+    position: relative;
+    padding-top: 50px;
+}
+.payment-title{
+    color: #3a87ad;
+    font-size: 15px;
+}
+.payment-description{
+    font-size: 13px;
+}
+.form-muave-container__checkbox{
+    margin-top: 20px;
+    font-size: 15px;
+}
+.muave-checkbox__link{
+    text-decoration: none;
+    color:#2fa4e7;
+}
+.muave-checkbox__link:hover{
+    text-decoration: underline;
+    color: #3a87ad;
+}
+.form-muave-container__btn-box{
+    margin-top: 30px;
+}
+.muave__return-btn{
+    background-color: #0686b7;
+    border: none;
+    color: white;
+    padding: 3px 8px;
+    font-size: 18px;
+    float: left;
+}
+.muave__next-btn{
+    background-color: #0686b7;
+    border: none;
+    color: white;
+    padding: 3px 8px;
+    font-size: 18px;
+    float: right;
+}
+.customer-info__content-box{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 13px;
+}
+.confirming__info--ticket__row{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+.confirming__info--ticket__content-row{
+    text-align: center;
+    font-size: 13px;
+}
+.confirming__info--ticket-td-align-justify{
+    text-align: justify;
+}
+.confirming__info--ticket-td-align-right{
+    text-align: right;
+}
+.confirming__info--ticket-notice{
+    margin-top: 20px;
+    font-size: 15px;
+}
+.form-online-payment-container{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    margin: 20px 220px;
+    padding: 20px 20px;
+    gap: 20px;
+    background-color: rgb(192, 192, 192);
+}
+.form-online-payment__content{
+    border-radius: 5px;
+    border: 1px solid #0082c4;
+    background-color: white;
+    padding: 20px 20px;
+    font-size: 13px;
+}
+.form-online-payment__label{
+    font-weight: bold;
+    margin: 3px 0px;
+}
+.form-online-payment__input-box{
+    margin-left: 100px;
+}
+.date-input{
+    width: 177px;
+}
+.form-online-payment__notice{
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+.form-online-payment__title{
+    color: #0082c4;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.form-online-payment__line{
+    margin: 10px 0px;
+}
+.qr-scan{
+    height: 175px;
+    width: 175px;
+}
+.form-complete-container{
+    font-size: 15px;
+    color: #2fa4e7;
+}
+.thanks{
+    margin-bottom: 3px;
+}
+.mdc-box{
+    background-color: lavender;
+    width: fit-content;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+}
+.layve-btn{
+    padding: 5px 5px;
+    color: rgb(255, 255, 255);
+    background-color: #54b4eb;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 17px;
+    margin-left: 500px;
+}
+.layve-btn:hover{
+    border: 1px solid rgb(30, 0, 255);
+}
+.print-ticket{
+    text-decoration: none;
+    color: aqua;
+}
+.print-ticket:hover{
+    color: #0082c4;
+    text-decoration: underline;
+}
