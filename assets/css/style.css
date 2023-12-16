@@ -1,106 +1,101 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
+
+.app {
+    position: relative;
+    min-height: 1200px;
+}
+
 /* Header */
-.header{
-    height: 110px;
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 120px;
     width: 100%;
     background-color: rgba(32, 43, 49, 1) !important;
     position: fixed;
 }
 
-.header__log{
-    /* width: 100%; */
-    /* position: relative; */
-    /* top: 0; */
-    margin-top: 8px;
+.header__log {
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
 }
 
-.header__log--webname{
-    /* position: absolute;
-    left: 0;
-    top: 0;
-    display: block; */
-    /* width: fit-content; */
-    /* text-align: center; */
-}
-.header__log--webname--logo{
+.header__log--webname {}
+
+.header__log--webname--logo {
     height: 50px;
     width: 125px;
-    /* position: absolute; */
 }
-.logo--name{
-    /* position: absolute; */
-    /* top: 50px; */
-    /* width: 125px; */
-    /* text-align: center; */
+
+.logo--name {
     float: left;
 }
+
 .header--info {
     display: flex;
     /* width: 350px; */
     gap: 12px;
     justify-content: space-between;
 }
-.header__log--btn{
-    /* width: 100px; */
-    /* position: absolute; */
+
+.header__log--btn {
+
     margin: 10px 5px 0px;
     top: 0;
-    text-align: center;    
+    text-align: center;
     font-size: 15px;
 }
-.header__log--btn:hover > a{
+
+.header__log--btn:hover>a {
     color: white;
 }
-/* #signup{
-    right: 0px;
-}
-#signin{
-    right: 90px;
-}
-#help{
-    right: 180px;
-} */
-.nav{
+
+.nav {
+    display: flex;
+    gap: 8px;
     text-align: left;
+    padding: 8px 0;
+    margin-top: 4px;
 }
+
 .nav__ul {
-    padding: 7px 0;
+    /* padding: 7px 0; */
+    align-items: center;
 }
-.nav li{
+
+.nav li {
     display: inline-block;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: 2rem;
     position: relative;
-    /* top: 45px; */
     padding: 0 12px;
     line-height: 38px;
     font-weight: bold;
-    /* text-transform: uppercase; */
     font-style: normal;
-
 }
 
-a{
+.home-icon {
+    /* transition: transform 0.5s; */
+}
+
+a {
     color: white;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-.nav a:hover{
-    color: aliceblue;    
-    /* background-color: rgba(35, 32, 32, 0.2); */
-    /* padding: 5px; */
+.nav a:hover {
+    color: aliceblue;
 }
-.nav__more {
-    /* width: 170px; */
-}
-ul.nav__more{
+
+.nav__more {}
+
+ul.nav__more {
     display: none;
-    background-color: rgba(28, 41, 48, 0.7);
+    background-color: rgb(71, 80, 86);
     position: absolute;
     left: 0px;
     top: 40px;
@@ -110,88 +105,248 @@ ul.nav__more{
     text-align: left;
     /* height: 40px; */
 }
-ul.nav__more li{
+
+ul.nav__more li {
     /* top: 0; */
 }
 
-li:hover .nav__more{
+li:hover .nav__more {
     display: block;
 }
 
-.footer{
-    /* font-family: Arial, Helvetica, sans-serif; */
-    position:absolute;
-    bottom: 0px;
+/* Container */
+.container {
+    position: relative;
+    top: 120px;
+    font-size: 1.6rem;
+    height: 800px;
+    /* top: 0;
+    left: 0; */
+}
+
+/* train station */
+.train-station {
+    position: relative;
+    /* top: 120px; */
+}
+
+.train-station__head {
+    margin: 48px 50px 12px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.train-station--search>input {
+    padding: 12px;
+    width: 250px;
+}
+
+.train-station--title {
+    font-size: 36px;
+}
+
+.train-station__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.train-station--map,
+.train-station--list {
+    /* height: 540px; */
+    /* background-color: #ccc; */
+    padding: 12px;
+}
+
+.train_list {
+    /* width: 600px; */
+    max-height: 760px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+#suggestion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.suggestion-item {
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+}
+
+.suggestion-item:hover {
+    background-color: #f2f2f2;
+}
+
+.img-train {
+    width: 150px;
+}
+
+.suggestion-item__content {
+    margin: 12px;
+}
+
+.suggestion-item__content--addr,
+.suggestion-item__content h2 {
+    margin-bottom: 12px;
+}
+
+.train_list-title,
+.map-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin: 12px;
+}
+
+.img-map {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Footer */
+.footer {
+    position: relative;
+    bottom: 0;
     left: 0px;
     right: 0px;
-    height: 500px;
+    height: 800px;
+    width: 100%;
+    /* margin-top: 200px; */
     /* background-color: rgb(13, 8, 93); */
     background-color: rgba(28, 41, 48, 1);
     color: rgb(255, 255, 255);
 }
-.footer-container{
-    /* margin-left: calc(calc(100% - 1200px)/2);
-    margin-right: calc(calc(100% - 1200px)/2); */
-    /* margin-right: 250px; */
-
+/* animation train */
+.train {
+    position: relative;
+    background-image: url(../img/background-train-animation.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: inline-block;
+    overflow: hidden;
+    /* background-color: #fff; /* Màu nền đoàn tàu */
 }
-.footer-flex-container{
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* max-width: 1200px; */
+
+.train-body {
+    width: 50%;
+    height: 43px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*background-color: #fff; /* Màu nền thân đoàn tàu */
+    animation: moveTrain 10s linear infinite;
+    /* Sử dụng animation với tên "moveTrain" */
+}
+
+.train-wheels {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    /*background-color: #fff; /* Màu nền bánh xe */
+    border-radius: 50%;
+    /* Để tạo hình tròn */
+    top: 40px;
+    /* Độ cao so với thân đoàn tàu */
+    animation: rotateWheels 0.5s linear infinite;
+    /* Sử dụng animation với tên "rotateWheels" */
+}
+
+@keyframes moveTrain {
+    0% {
+        left: -50%;
+        /* Vị trí ban đầu bên ngoài màn hình bên trái */
+    }
+
+    100% {
+        left: 100%;
+        /* Vị trí cuối cùng bên ngoài màn hình bên phải */
+    }
+}
+
+@keyframes rotateWheels {
+    0% {
+        transform: rotate(0deg);
+        /* Góc xoay ban đầu */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Góc xoay hoàn thành một vòng tròn */
+    }
+}
+.footer-container {}
+
+.footer-flex-container {
     padding-top: 56px;
     display: flex;
     justify-content: space-between;
-    width:100%
-
+    width: 100%
 }
+
 .footer-flex-container-group {
     max-width: 250px;
 }
-.footer-flex-container__box-title{
+
+.footer-flex-container__box-title {
     margin: 12px 0;
     font-size: 2rem;
     font-weight: bold;
 }
+
 .group--element {
     display: flex;
     flex-direction: column;
 }
-.footer-flex-container__box-content{
+
+.footer-flex-container__box-content {
     margin: 10px 0px;
-    font-weight:lighter;
+    font-weight: lighter;
     color: rgb(210, 146, 67);
     text-decoration: none;
     font-size: 1.6rem;
 }
-a:hover{
+
+a:hover {
     color: rgb(6, 239, 247);
     text-decoration: underline;
 }
-.footer-flex-container__box-logo{
+
+.footer-flex-container__box-logo {
     height: 90px;
     width: 250px;
 }
-.footer-flex-icon-container{
+
+.footer-flex-icon-container {
     display: flex;
     justify-content: space-between;
 }
-.footer-flex-container__box-icon{
+
+.footer-flex-container__box-icon {
     height: 50px;
     width: 50px;
     opacity: 0.6;
     font-size: 50px;
+    cursor: pointer;
 }
-.footer-flex-container__box-icon:hover{
+
+.footer-flex-container__box-icon:hover {
     opacity: 1.0;
 }
+
 .footer__bank-logo {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     justify-content: space-between;
 }
-.footer-flex-container__box-bank-logo{
+
+.footer-flex-container__box-bank-logo {
     height: 45px;
     width: 75px;
     padding: 12px 8px;
@@ -201,30 +356,28 @@ a:hover{
     border-radius: 8px;
 
 }
-.footer__hr{
+
+.footer__hr {
     margin: 36px 0px;
 }
-.footer-relative-container{
+
+.footer-relative-container {
     display: flex;
     flex-direction: column;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     height: 100%;
     width: 100%;
 }
+
 .footer_address {
     font-size: 1.4rem;
     padding-bottom: 12px;
 
 }
+
 .footer__copyright {
     font-size: 1.4rem;
     padding-bottom: 12px;
     font-weight: bold;
 }
-/* 
-
-.container {
-    top: 50px;
-    position: relative;
-} */
