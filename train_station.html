@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các nhà ga</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/train_station.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="grid">
+            <div class="header__log">
+                <div class="header__log--webname">
+                    <a href="#" class="">
+                        <img src="./assets/img/logo_tau.png" alt="" class="header__log--webname--logo">
+                        <!-- <div class="logo--name">VÉ TÀU</div> -->
+                    </a>
+                </div>
+                <div class="header--info">
+                    <div class="header__log--btn" id="help">
+                        <a href=""><i class="far fa-question-circle"></i> Hỗ trợ</a>
+                    </div>
+                    <div class="header__log--btn" id="signin">
+                        <a href=""><i class="fas fa-user-circle"></i> Đăng nhập</a>
+                    </div>
+                    <div class="header__log--btn" id="signup">
+                        <a href=""><i class="far fa-user-circle"></i> Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#" class="home-icon"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">Tìm vé</a>
+                    </li>
+                    <li>
+                        <a href="">Thông tin đặt chỗ</a>
+                    </li>
+                    <li>
+                        <a href="">Trả vé</a>
+                    </li>
+                    <li>
+                        <a href="">Giờ Tàu - Giá vé</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav__more">More</a>
+                        <ul class="nav__more">
+                            <li><a href="">Quy định</a></li>
+                            <li><a href="">Hướng dẫn</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="">Đại lý</a></li>
+                            <li><a href="">Nhà ga</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="train-station">
+                <div class="train-station__head">
+                    <h2 class="train-station--title">Hành trình tàu</h2>
+                    <div class="train-station--search">
+                        <input type="text" id="train-station-search-input" placeholder="Tìm kiếm nhà ga">
+                    </div>
+                </div>
+                <div class="train-station__content">
+                    <div class="grid__column_4 train-station--list">
+                        <div class="train_list-title">Danh sách nhà ga</div>
+                        <div class="train_list">
+                            <div id="suggestion-list">
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Lào Cai</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: Phường Phố Mới,thị xã Lào
+                                            Cai, tỉnh Lào Cai</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 020-830.093</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Đồng Đăng</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: Thị trấn Đồng Đăng, huyện
+                                            Cao Lộc, tỉnh Lạng Sơn</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 025.3851077</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Hải Phòng</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: 75 đường Lương Khánh Thiện,
+                                            quận Ngô Quyền, thành phố Hải Phòng</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 031.921333</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Hà Nội</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: 120 Lê Duẩn, Hoàn Kiếm, Hà
+                                            Nội</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại:</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Vinh</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: Số 1 Đường Lệ Ninh - Phường
+                                            Quán Bầu - Thành phố Vinh - Tỉnh Nghệ An</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 038-3853-426</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Huế</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: Số 02 Bùi Thị Xuân - Thành
+                                            phố Huế - Tỉnh Thừa Thiên Huế</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 054-3822.175</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Đà Nẵng</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: 202 Đường Hải Phòng - Thành
+                                            phố Đà Nẵng</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 0511-3823.810</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Quảng Ngãi</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: 204 Nguyễn Chí Thanh -
+                                            Phường Quảng Phú - Thị xã Quảng Ngãi - Tỉnh Quảng Ngãi</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 055-3820.280</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Nha Trang</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: 17 Thái Nguyên - Phường
+                                            Phước Tân - Thành phố Nha Trang - Tỉnh Khánh Hòa</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại: 058-3822.113</div>
+                                    </div>
+                                </div>
+                                <div class="suggestion-item">
+                                    <img class="img-train" src="./assets/img/background_muave.jpg" alt="">
+                                    <div class="suggestion-item__content">
+                                        <h2 class="train-title">Sài Gòn</h2>
+                                        <div class="suggestion-item__content--addr">Địa chỉ: Số 01 Nguyễn Thông - Phường
+                                            9 - Quận 3 - Thành phố Hồ Chí Minh</div>
+                                        <div class="suggestion-item__content--phone">Điện thoại:</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column_8 train-station--map">
+                        <div class="map-title">Bản đồ hành trình</div>
+                        <div class="train-station--img">
+                            <img class="img-map" src="./assets/img/ban-do-tuyen-duong-sat-viet-nam.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer__animation">
+            <div class="animation_train">
+                <div class="train">
+                    <div class="train-body">
+                        <img src="./assets/img/animation-train-footer.png" alt="">
+                    </div>
+                    <div class="train-wheels">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="grid">
+                <div class="footer-flex-container">
+                    <div class="footer-flex-container-group">
+                        <img src="./assets/img/web-logo.png" alt="" class="footer-flex-container__box-logo"> <br>
+                        <img src="./assets/img/sales-notice-logo.png" alt="" class="footer-flex-container__box-logo">
+                        <h3 class="footer-flex-container__box-title">Theo dõi chúng tôi trên</h3>
+                        <div class="footer-flex-icon-container">
+                            <a href="http://facebook.com" class="facebook"><i
+                                    class="fa-brands fa-facebook footer-flex-container__box-icon"
+                                    style="color: #005af5;"></i></a>
+                            <a href="http://youtube.com" class="youtube"><i
+                                    class="fa-brands fa-youtube footer-flex-container__box-icon"
+                                    style="color: #ff0019;"></i></a>
+                            <a href="http://tiktok.com" class="tiktok"><i
+                                    class="fa-brands fa-tiktok footer-flex-container__box-icon"
+                                    style="color: #000000;"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-flex-container-group">
+                        <h3 class="footer-flex-container__box-title">TRA CỨU</h3>
+                        <div class="group--element">
+                            <a href="#" class="footer-flex-container__box-content">Tìm vé</a>
+                            <a href="http://" class="footer-flex-container__box-content">Thông tin đặt chỗ</a>
+                            <a href="http://" class="footer-flex-container__box-content">Giờ tàu - Giá vé</a>
+                            <a href="http://" class="footer-flex-container__box-content">Các quy định</a>
+                        </div>
+                    </div>
+                    <div class="footer-flex-container-group">
+                        <h3 class="footer-flex-container__box-title">THÔNG TIN LIÊN HỆ</h3>
+                        <div class="group--element">
+                            <a href="http://" class="footer-flex-container__box-content">Hướng dẫn</a>
+                            <a href="http://" class="footer-flex-container__box-content">Liên hệ</a>
+                            <a href="http://" class="footer-flex-container__box-content">Đăng ký hội viên</a>
+                            <a href="http://" class="footer-flex-container__box-content">Về chúng tôi</a>
+                        </div>
+                    </div>
+                    <div class="footer-flex-container-group">
+                        <h3 class="footer-flex-container__box-title">KHÁC</h3>
+                        <div class="group--element">
+                            <a href="http://" class="footer-flex-container__box-content">Các đơn vị hợp tác</a>
+                            <a href="http://" class="footer-flex-container__box-content">Tuyển dụng</a>
+                        </div>
+                        <h3 class="footer-flex-container__box-title">ĐỐI TÁC THANH TOÁN</h3>
+                        <div class="footer__bank-logo">
+                            <img src="./assets/img/Logo_ACB.webp" alt="" class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_Agribank.webp" alt=""
+                                class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_BIDV.png" alt="" class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_OCB.png" alt="" class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_Sacombank.png" alt=""
+                                class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_Techcombank.png" alt=""
+                                class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_TPBank.png" alt="" class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_Vietcombank.webp" alt=""
+                                class="footer-flex-container__box-bank-logo">
+                            <img src="./assets/img/Logo_VPbank.png" alt="" class="footer-flex-container__box-bank-logo">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr class="footer__hr">
+            <div class="footer-relative-container">
+                <div class="footer_address">
+                    Tổng công ty Đường sắt Việt Nam. Số 118 Lê Duẩn, Hoàn Kiếm, Hà Nội.
+                </div>
+                <div class="footer__copyright">
+                    Copyright &copy; 2023 Tổng công ty Đường sắt Việt Nam
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var searchInput = document.getElementById('train-station-search-input');
+        var suggestionList = document.getElementById('suggestion-list');
+        searchInput.addEventListener('input', function () {
+            var userInput = searchInput.value.toLowerCase();
+            var suggestionItems = suggestionList.getElementsByClassName('suggestion-item');
+            for (var i = 0; i < suggestionItems.length; i++) {
+                var suggestionItem = suggestionItems[i];
+                var suggestionContent = suggestionItem.getElementsByClassName('suggestion-item__content')[0];
+                var suggestionTitle = suggestionContent.getElementsByClassName('train-title')[0];
+
+                if (suggestionTitle.textContent.toLowerCase().includes(userInput)) {
+                    suggestionItem.style.display = 'flex';
+                } else {
+                    suggestionItem.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
