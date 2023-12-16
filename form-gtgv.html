@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vé Tàu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/form-gtgv.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <div class="header__log">
+                    <div class="header__log--webname">
+                        <a href="#" class="">
+                            <img src="./assets/img/logo_tau.png" alt="" class="header__log--webname--logo">
+                        </a>
+                    </div>
+                    <div class="header--info">
+                        <div class="header__log--btn" id="help">
+                            <a href=""><i class="far fa-question-circle"></i> Hỗ trợ</a>
+                        </div>
+                        <div class="header__log--btn" id="signin">
+                            <a href=""><i class="fas fa-user-circle"></i> Đăng nhập</a>
+                        </div>
+                        <div class="header__log--btn" id="signup">
+                            <a href=""><i class="far fa-user-circle"></i> Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul class="nav__ul">
+                        <li>
+                            <a href=""><i class="fas fa-home"></i></a>
+                        </li>
+                        <li>
+                            <a href="">Tìm vé</a>
+                        </li>
+                        <li>
+                            <a href="">Thông tin đặt chỗ</a>
+                        </li>
+                        <li>
+                            <a href="">Trả vé</a>
+                        </li>
+                        <li>
+                            <a href="">Giờ Tàu - Giá vé</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__more">More</a>
+                            <ul class="nav__more">
+                                <li><a href="">Quy định</a></li>
+                                <li><a href="">Hướng dẫn</a></li>
+                                <li><a href="">Liên hệ</a></li>
+                                <li><a href="">Đại lý</a></li>
+                                <li><a href="">Nhà ga</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="grid">
+                <div class="form-container-1">
+                    <div class="form-gtgv-container">
+                        <div class="form-gtgv-container__title">
+                            <i class="fa-regular fa-clock" style="color: #ffffff;"> </i> Thông tin hành trình
+                        </div>
+                        <div class="form-gtgv-container__selective-box">
+                            <div class="form-gtgv__element">
+                                <div class="form-gtgv__element--label"><span
+                                        class="form-gtgv-container__selective-box-stt">1 </span> Ga đi</div>
+                                <input type="text" class="form-gtgv__element--input form-gtgv__input"
+                                    id="station_departure" list="stationList" placeholder="Chọn ga đi" required>
+                                <datalist id="stationList"></datalist>
+                            </div>
+                            <div>
+                                <i class="fa-sharp fa-solid fa-forward form-gtgv-container__selective-box-forward"
+                                    style="color: #84868b;"></i>
+                            </div>
+                            <div class="form-gtgv__element">
+                                <div class="form-gtgv__element--label"><span
+                                        class="form-gtgv-container__selective-box-stt">2 </span> Ga đến</div>
+                                <input type="text" class="form-gtgv__element--input form-gtgv__input"
+                                    id="station_destination" list="stationList" placeholder="Chọn ga đến">
+                                <datalist id="stationList"></datalist>
+                            </div>
+                            <div class="form-gtgv__element">
+                                <div class="form-gtgv__element--label"><span
+                                        class="form-gtgv-container__selective-box-stt">3 </span> Ngày</div>
+                                <input type="date" class="form-gtgv__element--input form-gtgv__input" id="datePicker"
+                                    name="date" placeholder="Chọn ngày">
+                            </div>
+                            <div>
+                                <i class="fa-sharp fa-solid fa-forward form-gtgv-container__selective-box-forward"
+                                    style="color: #84868b;"></i>
+                            </div>
+                            <div class="form-gtgv__element">
+                                <div class="form-gtgv__element--label"><span
+                                        class="form-gtgv-container__selective-box-stt">4 </span> Tàu</div>
+                                <input type="text" class="form-gtgv__element--input form-gtgv__input" id="train_name"
+                                    list="trainList" placeholder="Chọn tàu">
+                                <datalist id="trainList"></datalist>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="button" value="Tra cứu" class="form-gtgv__btn" id="gtgv_btn">
+                        </div>
+                        <div id="None">
+                            <div class="form-gtgv-container__summary-box-none">
+                                Không có tàu nào đi từ ga <b><span id="summary_departure"></span></b> đến ga <b><span
+                                        id="summary_destination"></span></b> trong ngày <b><span
+                                        id="summary_date_departure"></span></b>
+                            </div>
+                        </div>
+                        <div id="SE7">
+                            <div class="form-gtgv-container__summary-box">
+                                <div class="form-gtgv-container__summary-box_train-name">
+                                    <i class="fa-solid fa-train" style="color: #2356af;"> </i> Tàu <span
+                                        id="summary_train_name_7"></span>
+                                </div>
+                                <div class="form-gtgv-container__summary-box_journey-log-box">
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_departure">
+                                        Ga đi: <span id="summary_departure_7"></span> <br>
+                                        Ngày đi: <span id="summary_date_departure_7"></span> 06:10
+                                    </div>
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_arrow">
+                                        <i class="fa-solid fa-arrow-right" style="color: #84868b;"></i>
+                                    </div>
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_destination">
+                                        Ga đến: <span id="summary_destination_7"></span> <br>
+                                        Ngày đến: <span id="summary_date_destination_7"></span> 18:36
+                                    </div>
+                                </div>
+                                <div class="form-gtgv-container__summary-box_journey-time">Thời gian hành trình: 1 ngày
+                                    12 giờ 26 phút</div>
+                            </div>
+                            <div class="form-gtgv-container__content-box">
+                                <div class="form-gtgv-container__content-box_table">
+                                    <div class="form-gtgv-container__content-box_table-title">
+                                        Các ga trong hành trình
+                                    </div>
+                                    <div>
+                                        <table class="form-gtgv-container__content-box_table-data">
+                                            <tr class="form-gtgv-container__content-box_table-head">
+                                                <td>STT</td>
+                                                <td>Ga đi</td>
+                                                <td>Cự ly (Km)</td>
+                                                <td>Ngày đi</td>
+                                                <td>Giờ đến</td>
+                                                <td>Giờ đi</td>
+                                            </tr>
+                                            <tr class="content-box_table-row-selected">
+                                                <td>1</td>
+                                                <td class="content-box_table--text-align-left">Hà Nội</td>
+                                                <td>0</td>
+                                                <td>23/11/2023</td>
+                                                <td>06:10</td>
+                                                <td>06:10</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>2</td>
+                                                <td class="content-box_table--text-align-left">Phủ Lý</td>
+                                                <td>56</td>
+                                                <td>23/11/2023</td>
+                                                <td>07:16</td>
+                                                <td>07:21</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="content-box_table--text-align-left">Nam Định</td>
+                                                <td>87</td>
+                                                <td>23/11/2023</td>
+                                                <td>07:52</td>
+                                                <td>07:55</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>4</td>
+                                                <td class="content-box_table--text-align-left">Ninh Bình</td>
+                                                <td>115</td>
+                                                <td>23/11/2023</td>
+                                                <td>08:26</td>
+                                                <td>08:29</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="content-box_table--text-align-left">Bỉm Sơn</td>
+                                                <td>141</td>
+                                                <td>23/11/2023</td>
+                                                <td>09:09</td>
+                                                <td>09:12</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>6</td>
+                                                <td class="content-box_table--text-align-left">Thanh Hóa</td>
+                                                <td>175</td>
+                                                <td>23/11/2023</td>
+                                                <td>09:46</td>
+                                                <td>09:49</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td class="content-box_table--text-align-left">Minh Khôi</td>
+                                                <td>197</td>
+                                                <td>23/11/2023</td>
+                                                <td>10:10</td>
+                                                <td>10:13</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>8</td>
+                                                <td class="content-box_table--text-align-left">Chợ Sy</td>
+                                                <td>279</td>
+                                                <td>23/11/2023</td>
+                                                <td>11:38</td>
+                                                <td>11:41</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td class="content-box_table--text-align-left">Vinh</td>
+                                                <td>319</td>
+                                                <td>23/11/2023</td>
+                                                <td>12:32</td>
+                                                <td>12:39</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>10</td>
+                                                <td class="content-box_table--text-align-left">Yên Trung</td>
+                                                <td>340</td>
+                                                <td>23/11/2023</td>
+                                                <td>13:06</td>
+                                                <td>13:09</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td class="content-box_table--text-align-left">Hương Phố</td>
+                                                <td>387</td>
+                                                <td>23/11/2023</td>
+                                                <td>14:05</td>
+                                                <td>14:08</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>12</td>
+                                                <td class="content-box_table--text-align-left">Đồng Lê</td>
+                                                <td>436</td>
+                                                <td>23/11/2023</td>
+                                                <td>15:14</td>
+                                                <td>15:17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td class="content-box_table--text-align-left">Minh Lệ</td>
+                                                <td>482</td>
+                                                <td>23/11/2023</td>
+                                                <td>16:11</td>
+                                                <td>16:14</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>14</td>
+                                                <td class="content-box_table--text-align-left">Đồng Hới</td>
+                                                <td>522</td>
+                                                <td>23/11/2023</td>
+                                                <td>16:59</td>
+                                                <td>17:11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td class="content-box_table--text-align-left">Mỹ Đức</td>
+                                                <td>551</td>
+                                                <td>23/11/2023</td>
+                                                <td>17:43</td>
+                                                <td>17:46</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>16</td>
+                                                <td class="content-box_table--text-align-left">Mỹ Trạch</td>
+                                                <td>565</td>
+                                                <td>23/11/2023</td>
+                                                <td>18:13</td>
+                                                <td>18:16</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td class="content-box_table--text-align-left">Đông Hà</td>
+                                                <td>622</td>
+                                                <td>23/11/2023</td>
+                                                <td>19:25</td>
+                                                <td>19:28</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>18</td>
+                                                <td class="content-box_table--text-align-left">Huế</td>
+                                                <td>688</td>
+                                                <td>23/11/2023</td>
+                                                <td>20:38</td>
+                                                <td>20:43</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td class="content-box_table--text-align-left">Đà Nẵng</td>
+                                                <td>791</td>
+                                                <td>23/11/2023</td>
+                                                <td>23:13</td>
+                                                <td>23:33</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>20</td>
+                                                <td class="content-box_table--text-align-left">Tam Kỳ</td>
+                                                <td>865</td>
+                                                <td>24/11/2023</td>
+                                                <td>00:52</td>
+                                                <td>00:55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21</td>
+                                                <td class="content-box_table--text-align-left">Quãng Ngãi</td>
+                                                <td>928</td>
+                                                <td>24/11/2023</td>
+                                                <td>02:01</td>
+                                                <td>02:06</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>22</td>
+                                                <td class="content-box_table--text-align-left">Diêu Trì</td>
+                                                <td>1096</td>
+                                                <td>24/11/2023</td>
+                                                <td>05:03</td>
+                                                <td>05:15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>23</td>
+                                                <td class="content-box_table--text-align-left">Tuy Hòa</td>
+                                                <td>1198</td>
+                                                <td>24/11/2023</td>
+                                                <td>07:27</td>
+                                                <td>07:30</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>24</td>
+                                                <td class="content-box_table--text-align-left">Giã</td>
+                                                <td>1254</td>
+                                                <td>24/11/2023</td>
+                                                <td>08:41</td>
+                                                <td>08:44</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td class="content-box_table--text-align-left">Ninh Hòa</td>
+                                                <td>1281</td>
+                                                <td>24/11/2023</td>
+                                                <td>09:15</td>
+                                                <td>09:18</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>26</td>
+                                                <td class="content-box_table--text-align-left">Nha Trang</td>
+                                                <td>1315</td>
+                                                <td>24/11/2023</td>
+                                                <td>09:58</td>
+                                                <td>10:05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>27</td>
+                                                <td class="content-box_table--text-align-left">Tháp Chàm</td>
+                                                <td>1408</td>
+                                                <td>24/11/2023</td>
+                                                <td>11:45</td>
+                                                <td>11:48</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>28</td>
+                                                <td class="content-box_table--text-align-left">Bình Thuận</td>
+                                                <td>1551</td>
+                                                <td>24/11/2023</td>
+                                                <td>14:11</td>
+                                                <td>14:16</td>
+                                            </tr>
+                                            <tr>
+                                                <td>29</td>
+                                                <td class="content-box_table--text-align-left">Suối Kiết</td>
+                                                <td>1603</td>
+                                                <td>24/11/2023</td>
+                                                <td>15:17</td>
+                                                <td>15:20</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>30</td>
+                                                <td class="content-box_table--text-align-left">Long Khánh</td>
+                                                <td>1649</td>
+                                                <td>24/11/2023</td>
+                                                <td>16:16</td>
+                                                <td>16:19</td>
+                                            </tr>
+                                            <tr>
+                                                <td>31</td>
+                                                <td class="content-box_table--text-align-left">Biên Hòa</td>
+                                                <td>1697</td>
+                                                <td>24/11/2023</td>
+                                                <td>17:38</td>
+                                                <td>17:41</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>32</td>
+                                                <td class="content-box_table--text-align-left">Dĩ An</td>
+                                                <td>1707</td>
+                                                <td>24/11/2023</td>
+                                                <td>17:53</td>
+                                                <td>17:56</td>
+                                            </tr>
+                                            <tr class="content-box_table-row-selected">
+                                                <td>33</td>
+                                                <td class="content-box_table--text-align-left">Sài Gòn</td>
+                                                <td>1726</td>
+                                                <td>24/11/2023</td>
+                                                <td>18:36</td>
+                                                <td>18:36</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="form-gtgv-container__content-box_table">
+                                    <div class="form-gtgv-container__content-box_table-title">
+                                        Bảng giá vé
+                                    </div>
+                                    <div>
+                                        <table class="form-gtgv-container__content-box_table-data">
+                                            <tr class="form-gtgv-container__content-box_table-head">
+                                                <td>STT</td>
+                                                <td class="content-box_table-head--width">Mã</td>
+                                                <td>Loại chỗ</td>
+                                                <td>Giá vé (₫)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT1</td>
+                                                <td class="content-box_table--text-align-right">1.464.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>2</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT1v</td>
+                                                <td class="content-box_table--text-align-right">1.499.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT2</td>
+                                                <td class="content-box_table--text-align-right">1.358.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>4</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT2v</td>
+                                                <td class="content-box_table--text-align-right">1.393.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT1</td>
+                                                <td class="content-box_table--text-align-right">1.326.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>6</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT2</td>
+                                                <td class="content-box_table--text-align-right">1.196.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T3
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT3</td>
+                                                <td class="content-box_table--text-align-right">1.039.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>8</td>
+                                                <td class="content-box_table--text-align-left">Ngồi mềm điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NML</td>
+                                                <td class="content-box_table--text-align-right">879.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td class="content-box_table--text-align-left">Ngồi mềm điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NMLV</td>
+                                                <td class="content-box_table--text-align-right">899.000</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="form-gtgv-container__content-box_table-notice">
+                                        Chú ý: Giá vé đã bao gồm tiền bảo hiểm. <br>
+                                        Giá có thể thay đổi theo 1 số điều kiện: thời gian mua vé, đối tượng đi tàu, vị
+                                        trí chỗ trên toa...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="SE5">
+                            <div class="form-gtgv-container__summary-box">
+                                <div class="form-gtgv-container__summary-box_train-name">
+                                    <i class="fa-solid fa-train" style="color: #2356af;"> </i> Tàu <span
+                                        id="summary_train_name_5"></span>
+                                </div>
+                                <div class="form-gtgv-container__summary-box_journey-log-box">
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_departure">
+                                        Ga đi: <span id="summary_departure_5"></span> <br>
+                                        Ngày đi: <span id="summary_date_departure_5"></span> 15:30
+                                    </div>
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_arrow">
+                                        <i class="fa-solid fa-arrow-right" style="color: #84868b;"></i>
+                                    </div>
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_destination">
+                                        Ga đến: <span id="summary_destination_5"></span> <br>
+                                        Ngày đến: <span id="summary_date_destination_5"></span> 05:40
+                                    </div>
+                                </div>
+                                <div class="form-gtgv-container__summary-box_journey-time">Thời gian hành trình: 1 ngày
+                                    14 giờ 10 phút</div>
+                            </div>
+                            <div class="form-gtgv-container__content-box">
+                                <div class="form-gtgv-container__content-box_table">
+                                    <div class="form-gtgv-container__content-box_table-title">
+                                        Các ga trong hành trình
+                                    </div>
+                                    <div>
+                                        <table class="form-gtgv-container__content-box_table-data">
+                                            <tr class="form-gtgv-container__content-box_table-head">
+                                                <td>STT</td>
+                                                <td>Ga đi</td>
+                                                <td>Cự ly (Km)</td>
+                                                <td>Ngày đi</td>
+                                                <td>Giờ đến</td>
+                                                <td>Giờ đi</td>
+                                            </tr>
+                                            <tr class="content-box_table-row-selected">
+                                                <td>1</td>
+                                                <td class="content-box_table--text-align-left">Hà Nội</td>
+                                                <td>0</td>
+                                                <td>23/11/2023</td>
+                                                <td>15:30</td>
+                                                <td>15:30</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>2</td>
+                                                <td class="content-box_table--text-align-left">Phủ Lý</td>
+                                                <td>56</td>
+                                                <td>23/11/2023</td>
+                                                <td>16:36</td>
+                                                <td>16:39</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="content-box_table--text-align-left">Nam Định</td>
+                                                <td>87</td>
+                                                <td>23/11/2023</td>
+                                                <td>17:11</td>
+                                                <td>17:14</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>4</td>
+                                                <td class="content-box_table--text-align-left">Ninh Bình</td>
+                                                <td>115</td>
+                                                <td>23/11/2023</td>
+                                                <td>17:46</td>
+                                                <td>17:49</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="content-box_table--text-align-left">Bỉm Sơn</td>
+                                                <td>141</td>
+                                                <td>23/11/2023</td>
+                                                <td>18:31</td>
+                                                <td>18:34</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>6</td>
+                                                <td class="content-box_table--text-align-left">Thanh Hóa</td>
+                                                <td>175</td>
+                                                <td>23/11/2023</td>
+                                                <td>19:08</td>
+                                                <td>19:11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td class="content-box_table--text-align-left">Minh Khôi</td>
+                                                <td>197</td>
+                                                <td>23/11/2023</td>
+                                                <td>19:33</td>
+                                                <td>19:36</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>8</td>
+                                                <td class="content-box_table--text-align-left">Chợ Sy</td>
+                                                <td>279</td>
+                                                <td>23/11/2023</td>
+                                                <td>21:01</td>
+                                                <td>21:04</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td class="content-box_table--text-align-left">Vinh</td>
+                                                <td>319</td>
+                                                <td>23/11/2023</td>
+                                                <td>21:55</td>
+                                                <td>22:02</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>10</td>
+                                                <td class="content-box_table--text-align-left">Yên Trung</td>
+                                                <td>340</td>
+                                                <td>23/11/2023</td>
+                                                <td>22:30</td>
+                                                <td>22:38</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td class="content-box_table--text-align-left">Hương Phố</td>
+                                                <td>387</td>
+                                                <td>23/11/2023</td>
+                                                <td>23:34</td>
+                                                <td>23:41</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>12</td>
+                                                <td class="content-box_table--text-align-left">Đồng Lê</td>
+                                                <td>436</td>
+                                                <td>24/11/2023</td>
+                                                <td>15:14</td>
+                                                <td>15:17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td class="content-box_table--text-align-left">Đồng Hới</td>
+                                                <td>522</td>
+                                                <td>24/11/2023</td>
+                                                <td>02:27</td>
+                                                <td>02:39</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>14</td>
+                                                <td class="content-box_table--text-align-left">Đông Hà</td>
+                                                <td>622</td>
+                                                <td>24/11/2023</td>
+                                                <td>04:27</td>
+                                                <td>04:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td class="content-box_table--text-align-left">Huế</td>
+                                                <td>688</td>
+                                                <td>24/11/2023</td>
+                                                <td>05:40</td>
+                                                <td>05:45</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>16</td>
+                                                <td class="content-box_table--text-align-left">Đà Nẵng</td>
+                                                <td>791</td>
+                                                <td>24/11/2023</td>
+                                                <td>08:26</td>
+                                                <td>08:46</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td class="content-box_table--text-align-left">Trà Kiệu</td>
+                                                <td>825</td>
+                                                <td>24/11/2023</td>
+                                                <td>09:28</td>
+                                                <td>09:41</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>18</td>
+                                                <td class="content-box_table--text-align-left">Tam Kỳ</td>
+                                                <td>865</td>
+                                                <td>24/11/2023</td>
+                                                <td>10:18</td>
+                                                <td>10:21</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td class="content-box_table--text-align-left">Núi Thành</td>
+                                                <td>890</td>
+                                                <td>24/11/2023</td>
+                                                <td>11:14</td>
+                                                <td>11:17</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>20</td>
+                                                <td class="content-box_table--text-align-left">Quảng Ngãi</td>
+                                                <td>928</td>
+                                                <td>24/11/2023</td>
+                                                <td>12:00</td>
+                                                <td>12:06</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21</td>
+                                                <td class="content-box_table--text-align-left">Đức Phổ</td>
+                                                <td>968</td>
+                                                <td>24/11/2023</td>
+                                                <td>12:50</td>
+                                                <td>12:53</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>22</td>
+                                                <td class="content-box_table--text-align-left">Bồng Sơn</td>
+                                                <td>1017</td>
+                                                <td>24/11/2023</td>
+                                                <td>13:45</td>
+                                                <td>13:48</td>
+                                            </tr>
+                                            <tr>
+                                                <td>23</td>
+                                                <td class="content-box_table--text-align-left">Diêu Trì</td>
+                                                <td>1096</td>
+                                                <td>24/11/2023</td>
+                                                <td>15:13</td>
+                                                <td>15:25</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>24</td>
+                                                <td class="content-box_table--text-align-left">Tuy Hòa</td>
+                                                <td>1198</td>
+                                                <td>24/11/2023</td>
+                                                <td>17:52</td>
+                                                <td>17:55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td class="content-box_table--text-align-left">Giã</td>
+                                                <td>1254</td>
+                                                <td>24/11/2023</td>
+                                                <td>19:06</td>
+                                                <td>19:09</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>26</td>
+                                                <td class="content-box_table--text-align-left">Ninh Hòa</td>
+                                                <td>1281</td>
+                                                <td>24/11/2023</td>
+                                                <td>19:51</td>
+                                                <td>19:54</td>
+                                            </tr>
+                                            <tr>
+                                                <td>27</td>
+                                                <td class="content-box_table--text-align-left">Nha Trang</td>
+                                                <td>1315</td>
+                                                <td>24/11/2023</td>
+                                                <td>20:34</td>
+                                                <td>20:41</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>28</td>
+                                                <td class="content-box_table--text-align-left">Tháp Chàm</td>
+                                                <td>1408</td>
+                                                <td>24/11/2023</td>
+                                                <td>22:48</td>
+                                                <td>22:51</td>
+                                            </tr>
+                                            <tr>
+                                                <td>29</td>
+                                                <td class="content-box_table--text-align-left">Sông Mao</td>
+                                                <td>1484</td>
+                                                <td>25/11/2023</td>
+                                                <td>00:20</td>
+                                                <td>00:23</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>30</td>
+                                                <td class="content-box_table--text-align-left">Bình Thuận</td>
+                                                <td>1551</td>
+                                                <td>25/11/2023</td>
+                                                <td>01:43</td>
+                                                <td>01:51</td>
+                                            </tr>
+                                            <tr>
+                                                <td>31</td>
+                                                <td class="content-box_table--text-align-left">Long Khánh</td>
+                                                <td>1649</td>
+                                                <td>25/11/2023</td>
+                                                <td>03:46</td>
+                                                <td>03:49</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>32</td>
+                                                <td class="content-box_table--text-align-left">Biên Hòa</td>
+                                                <td>1697</td>
+                                                <td>25/11/2023</td>
+                                                <td>04:49</td>
+                                                <td>04:52</td>
+                                            </tr>
+                                            <tr>
+                                                <td>33</td>
+                                                <td class="content-box_table--text-align-left">Dĩ An</td>
+                                                <td>1707</td>
+                                                <td>25/11/2023</td>
+                                                <td>05:05</td>
+                                                <td>05:08</td>
+                                            </tr>
+                                            <tr class="content-box_table-row-selected content-box_table-row--color">
+                                                <td>34</td>
+                                                <td class="content-box_table--text-align-left">Sài Gòn</td>
+                                                <td>1726</td>
+                                                <td>25/11/2023</td>
+                                                <td>05:40</td>
+                                                <td>05:40</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="form-gtgv-container__content-box_table">
+                                    <div class="form-gtgv-container__content-box_table-title">
+                                        Bảng giá vé
+                                    </div>
+                                    <div>
+                                        <table class="form-gtgv-container__content-box_table-data">
+                                            <tr class="form-gtgv-container__content-box_table-head">
+                                                <td>STT</td>
+                                                <td class="content-box_table-head--width">Mã</td>
+                                                <td>Loại chỗ</td>
+                                                <td>Giá vé (₫)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT1M</td>
+                                                <td class="content-box_table--text-align-right">1.565.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>2</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT1Mv</td>
+                                                <td class="content-box_table--text-align-right">1.600.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT2M</td>
+                                                <td class="content-box_table--text-align-right">1.452.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>4</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT2Mv</td>
+                                                <td class="content-box_table--text-align-right">1.487.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT1M</td>
+                                                <td class="content-box_table--text-align-right">1.391.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>6</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT2M</td>
+                                                <td class="content-box_table--text-align-right">1.255.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T3
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT3M</td>
+                                                <td class="content-box_table--text-align-right">1.068.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>8</td>
+                                                <td class="content-box_table--text-align-left">Ghế phụ</td>
+                                                <td class="content-box_table--text-align-left">GP</td>
+                                                <td class="content-box_table--text-align-right">777.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td class="content-box_table--text-align-left">Ngồi cứng điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NCL</td>
+                                                <td class="content-box_table--text-align-right">Chưa có giá</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>10</td>
+                                                <td class="content-box_table--text-align-left">Ngồi mềm điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NML56</td>
+                                                <td class="content-box_table--text-align-right">1.041.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td class="content-box_table--text-align-left">Ngồi mềm điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NML56V</td>
+                                                <td class="content-box_table--text-align-right">1.061.000</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="form-gtgv-container__content-box_table-notice">
+                                        Chú ý: Giá vé đã bao gồm tiền bảo hiểm. <br>
+                                        Giá có thể thay đổi theo 1 số điều kiện: thời gian mua vé, đối tượng đi tàu, vị
+                                        trí chỗ trên toa...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="SE8">
+                            <div class="form-gtgv-container__summary-box">
+                                <div class="form-gtgv-container__summary-box_train-name">
+                                    <i class="fa-solid fa-train" style="color: #2356af;"> </i> Tàu <span
+                                        id="summary_train_name_8"></span>
+                                </div>
+                                <div class="form-gtgv-container__summary-box_journey-log-box">
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_departure">
+                                        Ga đi: <span id="summary_departure_8"></span> <br>
+                                        Ngày đi: <span id="summary_date_departure_8"></span> 06:00
+                                    </div>
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_arrow">
+                                        <i class="fa-solid fa-arrow-right" style="color: #84868b;"></i>
+                                    </div>
+                                    <div class="form-gtgv-container__summary-box_journey-log-box_destination">
+                                        Ga đến: <span id="summary_destination_8"></span> <br>
+                                        Ngày đến: <span id="summary_date_destination_8"></span> 19:12
+                                    </div>
+                                </div>
+                                <div class="form-gtgv-container__summary-box_journey-time">Thời gian hành trình: 1 ngày
+                                    13 giờ 12 phút</div>
+                            </div>
+                            <div class="form-gtgv-container__content-box">
+                                <div class="form-gtgv-container__content-box_table">
+                                    <div class="form-gtgv-container__content-box_table-title">
+                                        Các ga trong hành trình
+                                    </div>
+                                    <div>
+                                        <table class="form-gtgv-container__content-box_table-data">
+                                            <tr class="form-gtgv-container__content-box_table-head">
+                                                <td>STT</td>
+                                                <td>Ga đi</td>
+                                                <td>Cự ly (Km)</td>
+                                                <td>Ngày đi</td>
+                                                <td>Giờ đến</td>
+                                                <td>Giờ đi</td>
+                                            </tr>
+                                            <tr class="content-box_table-row-selected">
+                                                <td>1</td>
+                                                <td class="content-box_table--text-align-left">Sài Gòn</td>
+                                                <td>0</td>
+                                                <td>23/11/2023</td>
+                                                <td>06:00</td>
+                                                <td>06:00</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>2</td>
+                                                <td class="content-box_table--text-align-left">Dĩ An</td>
+                                                <td>19</td>
+                                                <td>23/11/2023</td>
+                                                <td>06:28</td>
+                                                <td>06:31</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="content-box_table--text-align-left">Biên Hòa</td>
+                                                <td>29</td>
+                                                <td>23/11/2023</td>
+                                                <td>06:43</td>
+                                                <td>06:46</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>4</td>
+                                                <td class="content-box_table--text-align-left">Long Khánh</td>
+                                                <td>77</td>
+                                                <td>23/11/2023</td>
+                                                <td>07:51</td>
+                                                <td>07:54</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="content-box_table--text-align-left">Suối Kiết</td>
+                                                <td>123</td>
+                                                <td>23/11/2023</td>
+                                                <td>08:45</td>
+                                                <td>08:48</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>6</td>
+                                                <td class="content-box_table--text-align-left">Bình Thuận</td>
+                                                <td>175</td>
+                                                <td>23/11/2023</td>
+                                                <td>09:45</td>
+                                                <td>09:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td class="content-box_table--text-align-left">Tháp Chàm</td>
+                                                <td>318</td>
+                                                <td>23/11/2023</td>
+                                                <td>12:23</td>
+                                                <td>12:26</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>8</td>
+                                                <td class="content-box_table--text-align-left">Nha Trang</td>
+                                                <td>411</td>
+                                                <td>23/11/2023</td>
+                                                <td>14:05</td>
+                                                <td>14:12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td class="content-box_table--text-align-left">Ninh Hòa</td>
+                                                <td>445</td>
+                                                <td>23/11/2023</td>
+                                                <td>14:55</td>
+                                                <td>14:58</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>10</td>
+                                                <td class="content-box_table--text-align-left">Giã</td>
+                                                <td>472</td>
+                                                <td>23/11/2023</td>
+                                                <td>15:27</td>
+                                                <td>15:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td class="content-box_table--text-align-left">Tuy Hòa</td>
+                                                <td>528</td>
+                                                <td>23/11/2023</td>
+                                                <td>16:41</td>
+                                                <td>16:44</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>12</td>
+                                                <td class="content-box_table--text-align-left">Diêu Trì</td>
+                                                <td>630</td>
+                                                <td>23/11/2023</td>
+                                                <td>18:42</td>
+                                                <td>19:02</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td class="content-box_table--text-align-left">Bồng Sơn</td>
+                                                <td>709</td>
+                                                <td>23/11/2023</td>
+                                                <td>20:30</td>
+                                                <td>20:33</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>14</td>
+                                                <td class="content-box_table--text-align-left">Quãng Ngãi</td>
+                                                <td>798</td>
+                                                <td>23/11/2023</td>
+                                                <td>22:05</td>
+                                                <td>22:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td class="content-box_table--text-align-left">Tam Kỳ</td>
+                                                <td>861</td>
+                                                <td>23/11/2023</td>
+                                                <td>23:15</td>
+                                                <td>23:18</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>16</td>
+                                                <td class="content-box_table--text-align-left">Đà Nẵng</td>
+                                                <td>935</td>
+                                                <td>24/11/2023</td>
+                                                <td>00:41</td>
+                                                <td>01:01</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td class="content-box_table--text-align-left">Huế</td>
+                                                <td>1038</td>
+                                                <td>24/11/2023</td>
+                                                <td>03:26</td>
+                                                <td>03:31</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>18</td>
+                                                <td class="content-box_table--text-align-left">Đông Hà</td>
+                                                <td>1104</td>
+                                                <td>24/11/2023</td>
+                                                <td>04:58</td>
+                                                <td>05:01</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td class="content-box_table--text-align-left">Mỹ Đức</td>
+                                                <td>1175</td>
+                                                <td>24/11/2023</td>
+                                                <td>06:17</td>
+                                                <td>06:24</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>20</td>
+                                                <td class="content-box_table--text-align-left">Đồng Hới</td>
+                                                <td>1204</td>
+                                                <td>24/11/2023</td>
+                                                <td>06:56</td>
+                                                <td>07:08</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21</td>
+                                                <td class="content-box_table--text-align-left">Minh Lệ</td>
+                                                <td>1244</td>
+                                                <td>24/11/2023</td>
+                                                <td>08:12</td>
+                                                <td>08:15</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>22</td>
+                                                <td class="content-box_table--text-align-left">Đồng Lê</td>
+                                                <td>1290</td>
+                                                <td>24/11/2023</td>
+                                                <td>09:09</td>
+                                                <td>09:12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>23</td>
+                                                <td class="content-box_table--text-align-left">Hương Phố</td>
+                                                <td>1339</td>
+                                                <td>24/11/2023</td>
+                                                <td>10:18</td>
+                                                <td>10:21</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>24</td>
+                                                <td class="content-box_table--text-align-left">Yên Trung</td>
+                                                <td>1386</td>
+                                                <td>24/11/2023</td>
+                                                <td>11:17</td>
+                                                <td>11:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td class="content-box_table--text-align-left">Vinh</td>
+                                                <td>1407</td>
+                                                <td>24/11/2023</td>
+                                                <td>11:48</td>
+                                                <td>11:55</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>26</td>
+                                                <td class="content-box_table--text-align-left">Chợ Sy</td>
+                                                <td>1447</td>
+                                                <td>24/11/2023</td>
+                                                <td>13:04</td>
+                                                <td>13:07</td>
+                                            </tr>
+                                            <tr>
+                                                <td>27</td>
+                                                <td class="content-box_table--text-align-left">Minh Khôi</td>
+                                                <td>1529</td>
+                                                <td>24/11/2023</td>
+                                                <td>14:37</td>
+                                                <td>14:40</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>28</td>
+                                                <td class="content-box_table--text-align-left">Thanh Hóa</td>
+                                                <td>1551</td>
+                                                <td>24/11/2023</td>
+                                                <td>15:02</td>
+                                                <td>15:05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>29</td>
+                                                <td class="content-box_table--text-align-left">Bỉm Sơn</td>
+                                                <td>1585</td>
+                                                <td>24/11/2023</td>
+                                                <td>15:40</td>
+                                                <td>15:43</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>30</td>
+                                                <td class="content-box_table--text-align-left">Ninh Bình</td>
+                                                <td>1611</td>
+                                                <td>24/11/2023</td>
+                                                <td>16:26</td>
+                                                <td>16:29</td>
+                                            </tr>
+                                            <tr>
+                                                <td>31</td>
+                                                <td class="content-box_table--text-align-left">Nam Định</td>
+                                                <td>1639</td>
+                                                <td>24/11/2023</td>
+                                                <td>17:05</td>
+                                                <td>17:17</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>32</td>
+                                                <td class="content-box_table--text-align-left">Phủ Lý</td>
+                                                <td>1670</td>
+                                                <td>24/11/2023</td>
+                                                <td>17:54</td>
+                                                <td>17:57</td>
+                                            </tr>
+                                            <tr class="content-box_table-row-selected">
+                                                <td>33</td>
+                                                <td class="content-box_table--text-align-left">Sài Gòn</td>
+                                                <td>1726</td>
+                                                <td>24/11/2023</td>
+                                                <td>19:12</td>
+                                                <td>19:12</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="form-gtgv-container__content-box_table">
+                                    <div class="form-gtgv-container__content-box_table-title">
+                                        Bảng giá vé
+                                    </div>
+                                    <div>
+                                        <table class="form-gtgv-container__content-box_table-data">
+                                            <tr class="form-gtgv-container__content-box_table-head">
+                                                <td>STT</td>
+                                                <td class="content-box_table-head--width">Mã</td>
+                                                <td>Loại chỗ</td>
+                                                <td>Giá vé (₫)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT1</td>
+                                                <td class="content-box_table--text-align-right">1.531.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>2</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT1v</td>
+                                                <td class="content-box_table--text-align-right">1.566.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT2</td>
+                                                <td class="content-box_table--text-align-right">1.438.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>4</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 4 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">AnLT2v</td>
+                                                <td class="content-box_table--text-align-right">1.473.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T1
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT1</td>
+                                                <td class="content-box_table--text-align-right">1.404.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>6</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T2
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT2</td>
+                                                <td class="content-box_table--text-align-right">1.305.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td class="content-box_table--text-align-left">Nằm khoang 6 điều hòa T3
+                                                </td>
+                                                <td class="content-box_table--text-align-left">BnLT3</td>
+                                                <td class="content-box_table--text-align-right">1.114.000</td>
+                                            </tr>
+                                            <tr class="content-box_table-row--color">
+                                                <td>8</td>
+                                                <td class="content-box_table--text-align-left">Ngồi mềm điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NML</td>
+                                                <td class="content-box_table--text-align-right">901.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td class="content-box_table--text-align-left">Ngồi mềm điều hòa</td>
+                                                <td class="content-box_table--text-align-left">NMLV</td>
+                                                <td class="content-box_table--text-align-right">921.000</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="form-gtgv-container__content-box_table-notice">
+                                        Chú ý: Giá vé đã bao gồm tiền bảo hiểm. <br>
+                                        Giá có thể thay đổi theo 1 số điều kiện: thời gian mua vé, đối tượng đi tàu, vị
+                                        trí chỗ trên toa...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="grid">
+                    <div class="footer-flex-container">
+                        <div class="footer-flex-container-group">
+                            <img src="./assets/img/web-logo.png" alt="" class="footer-flex-container__box-logo"> <br>
+                            <img src="./assets/img/sales-notice-logo.png" alt=""
+                                class="footer-flex-container__box-logo">
+                            <h3 class="footer-flex-container__box-title">Theo dõi chúng tôi trên</h3>
+                            <div class="footer-flex-icon-container">
+                                <i class="fa-brands fa-facebook footer-flex-container__box-icon"
+                                    style="color: #005af5;"></i>
+                                <i class="fa-brands fa-youtube footer-flex-container__box-icon"
+                                    style="color: #ff0019;"></i>
+                                <i class="fa-brands fa-tiktok footer-flex-container__box-icon"
+                                    style="color: #000000;"></i>
+                            </div>
+                        </div>
+                        <div class="footer-flex-container-group">
+                            <h3 class="footer-flex-container__box-title">TRA CỨU</h3>
+                            <div class="group--element">
+                                <a href="http://" class="footer-flex-container__box-content">Tìm vé</a>
+                                <a href="http://" class="footer-flex-container__box-content">Thông tin đặt chỗ</a>
+                                <a href="http://" class="footer-flex-container__box-content">Giờ tàu - Giá vé</a>
+                                <a href="http://" class="footer-flex-container__box-content">Các quy định</a>
+                            </div>
+                        </div>
+                        <div class="footer-flex-container-group">
+                            <h3 class="footer-flex-container__box-title">THÔNG TIN LIÊN HỆ</h3>
+                            <div class="group--element">
+                                <a href="http://" class="footer-flex-container__box-content">Hướng dẫn</a>
+                                <a href="http://" class="footer-flex-container__box-content">Liên hệ</a>
+                                <a href="http://" class="footer-flex-container__box-content">Đăng ký hội viên</a>
+                                <a href="http://" class="footer-flex-container__box-content">Về chúng tôi</a>
+                            </div>
+                        </div>
+                        <div class="footer-flex-container-group">
+                            <h3 class="footer-flex-container__box-title">KHÁC</h3>
+                            <div class="group--element">
+                                <a href="http://" class="footer-flex-container__box-content">Các đơn vị hợp tác</a>
+                                <a href="http://" class="footer-flex-container__box-content">Tuyển dụng</a>
+                            </div>
+                            <h3 class="footer-flex-container__box-title">ĐỐI TÁC THANH TOÁN</h3>
+                            <div class="footer__bank-logo">
+                                <img src="./assets/img/Logo_ACB.webp" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Agribank.webp" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_BIDV.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_OCB.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Sacombank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Techcombank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_TPBank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_Vietcombank.webp" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                                <img src="./assets/img/Logo_VPbank.png" alt=""
+                                    class="footer-flex-container__box-bank-logo">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="footer__hr">
+                <div class="footer-relative-container">
+                    <div class="footer_address">
+                        Tổng công ty Đường sắt Việt Nam. Số 118 Lê Duẩn, Hoàn Kiếm, Hà Nội.
+                    </div>
+                    <div class="footer__copyright">
+                        Copyright &copy; 2023 Tổng công ty Đường sắt Việt Nam
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var stationList = document.getElementById("stationList");
+        var stations = [
+            "Hà Nội", "Giáp Bát", "Văn Điển", "Thường Tín", "Chợ Tía", "Vạn Điểm", "Phú Xuyên", "Đồng Văn", "Phủ Lý", "Bình Lục", "Cầu Họ", "Đặng Xá", "Nam Định", "Trình Xuyên", "Núi Gôi", "Cát Đằng", "Ninh Bình",
+            "Cầu Yên", "Ghềnh", "Đồng Giao", "Bỉm Sơn", "Đò Lèn", "Nghĩa Trang", "Thanh Hóa",
+            "Yên Thái", "Minh Khôi", "Thị Long", "Văn Trai", "Khoa Trường", "Trường Lâm", "Hoàng Mai", "Cầu Giát", "Yên Lý", "Chợ Sy", "Mỹ Lý", "Quán Hành", "Vinh",
+            "Yên Xuân", "Yên Trung", "Đức Lạc", "Yên Duệ", "Hòa Duyệt", "Thanh Luyện", "Chu Lễ", "Hương Phố", "Phúc Trạch", "La Khê", "Tân Ấp", "Đồng Chuối", "Kim Lũ", "Đồng Lê", "Ngọc Lâm", "Lạc Sơn", "Lệ Sơn", "Minh Lệ", "Ngân Sơn", "Thọ Lộc", "Hoàn Lão", "Phúc Tự", "Đồng Hới",
+            "Lệ Kỳ", "Long Đại", "Mỹ Đức", "Phú Hòa", "Mỹ Trạch", "Thượng Lâm", "Sa Lung", "Tiên An", "Hà Thanh", "Đông Hà", "Quảng Trị", "Diên Sanh", "Mỹ Chánh", "Phò Trạch", "Hiền Sỹ", "Văn Xá", "Huế",
+            "Hương Thủy", "Truồi", "Cầu Hai", "Thừa Lưu", "Lăng Cô", "Hải Vân Bắc", "Hải Vân", "Hải Vân Nam", "Kim Liên", "Thanh Khê", "Đà Nẵng",
+            "Lệ Trạch", "Nông Sơn", "Trà Kiệu", "Phú Cang", "An Mỹ", "Tam Kỳ", "Diêm Phổ", "Núi Thành", "Trị Bình", "Bình Sơn", "Đại Lộc", "Quảng Ngãi",
+            "Hòa Vinh Tây", "Mộ Đức", "Thạch Trụ", "Đức Phổ", "Thủy Trạch", "Sa Huỳnh", "Tam Quan", "Bồng Sơn", "Vạn Phú", "Phù Mỹ", "Khánh Phước", "Phù Cát", "Bình Định", "Quy Nhơn", "Diêu Trì",
+            "Tân Vinh", "Vân Canh", "Phước Lãnh", "La Hai", "Chí Thạnh", "Hòa Đa", "Tuy Hòa", "Đông Tác", "Phú Hiệp", "Hảo Sơn", "Đại Lãnh", "Tu Bông", "Giã", "Hòa Huỳnh", "Ninh Hòa", "Phong Thạnh", "Lương Sơn", "Nha Trang",
+            "Cây Cầy", "Hòa Tân", "Suối Cát", "Ngã Ba", "Kà Rôm", "Phước Nhơn", "Tháp Chàm", "Hòa Trinh", "Cà Ná", "Vĩnh Hảo", "Sông Lòng Sông", "Sông Mao", "Châu Hanh", "Sông Lũy", "Long Thạnh", "Ma Lâm", "Phan Thiết", "Bình Thuận",
+            "Suối Vận", "Sông Phan", "Sông Dinh", "Suối Kiết", "Gia Huynh", "Trản Táo", "Gia Ray", "Bảo Chánh", "Long Khánh", "Dầu Giây", "Trảng Bom", "Hố Nai", "Biên Hòa", "Dĩ An", "Sóng Thần", "Bình Triệu", "Gò Vấp", "Sài Gòn"
+        ];
+        stations.forEach(function (station) {
+            var option = document.createElement("option");
+            option.value = station;
+            stationList.appendChild(option);
+        });
+        var trainList = document.getElementById("trainList");
+        var trains = [
+            "SE7", "SE5", "SE3", "SE1", "SE8", "SE6", "SE4", "SE2"
+        ];
+        trains.forEach(function (train) {
+            var option = document.createElement("option");
+            option.value = train;
+            trainList.appendChild(option);
+        });
+
+        var None = document.getElementById("None");
+        var SE5 = document.getElementById("SE5");
+        var SE7 = document.getElementById("SE7");
+        var SE8 = document.getElementById("SE8");
+        var gtgv_btn = document.getElementById("gtgv_btn");
+        var summary_train_name = document.getElementById("summary_train_name");
+        var summary_departure = document.getElementById("summary_departure");
+        var summary_destination = document.getElementById("summary_destination");
+        var summary_train_name_5 = document.getElementById("summary_train_name_5");
+        var summary_departure_5 = document.getElementById("summary_departure_5");
+        var summary_destination_5 = document.getElementById("summary_destination_5");
+        var summary_train_name_7 = document.getElementById("summary_train_name_7");
+        var summary_departure_7 = document.getElementById("summary_departure_7");
+        var summary_destination_7 = document.getElementById("summary_destination_7");
+        var summary_train_name_8 = document.getElementById("summary_train_name_8");
+        var summary_departure_8 = document.getElementById("summary_departure_8");
+        var summary_destination_8 = document.getElementById("summary_destination_8");
+        var summary_date_departure = document.getElementById("summary_date_departure");
+        var summary_date_departure_7 = document.getElementById("summary_date_departure_7");
+        var summary_date_destination_7 = document.getElementById("summary_date_destination_7");
+        var summary_date_departure_5 = document.getElementById("summary_date_departure_5");
+        var summary_date_destination_5 = document.getElementById("summary_date_destination_5");
+        var summary_date_departure_8 = document.getElementById("summary_date_departure_8");
+        var summary_date_destination_8 = document.getElementById("summary_date_destination_8");
+
+        gtgv_btn.addEventListener("click", function () {
+            var train_name = document.getElementById("train_name").value;
+            var datePicker = document.getElementById("datePicker").value;
+            var station_departure = document.getElementById("station_departure").value;
+            var station_destination = document.getElementById("station_destination").value;
+            var parts = datePicker.split("-");
+            var formated_date = parts[2] + "/" + parts[1] + "/" + parts[0];
+            var formated_date_1 = (parseInt(parts[2]) + 1) + "/" + parts[1] + "/" + parts[0];
+            var formated_date_2 = (parseInt(parts[2]) + 2) + "/" + parts[1] + "/" + parts[0];
+
+            if (station_departure === "Hà Nội") {
+                if (station_destination === "Sài Gòn") {
+                    if (datePicker === "2023-11-23") {
+                        if (train_name === "SE5") {
+                            SE5.style.display = "block";
+                            SE7.style.display = "none";
+                            SE8.style.display = "none";
+                            None.style.display = "none";
+                            summary_train_name_5.innerHTML = train_name;
+                            summary_departure_5.innerHTML = station_departure;
+                            summary_destination_5.innerHTML = station_destination;
+                            summary_date_departure_5.innerHTML = formated_date;
+                            summary_date_destination_5.innerHTML = formated_date_2;
+                        }
+                        else if (train_name === "SE7") {
+                            SE5.style.display = "none";
+                            SE7.style.display = "block";
+                            SE8.style.display = "none";
+                            None.style.display = "none";
+                            summary_train_name_7.innerHTML = train_name;
+                            summary_departure_7.innerHTML = station_departure;
+                            summary_destination_7.innerHTML = station_destination;
+                            summary_date_departure_7.innerHTML = formated_date;
+                            summary_date_destination_7.innerHTML = formated_date_1;
+                        }
+                    }
+                    else {
+                        SE5.style.display = "none";
+                        SE7.style.display = "none";
+                        SE8.style.display = "none";
+                        None.style.display = "block";
+                        summary_departure.textContent = station_departure;
+                        summary_destination.textContent = station_destination;
+                        summary_date_departure.textContent = formated_date;
+                    }
+                }
+                else {
+                    SE5.style.display = "none";
+                    SE7.style.display = "none";
+                    SE8.style.display = "none";
+                    None.style.display = "block";
+                    summary_departure.textContent = station_departure;
+                    summary_destination.textContent = station_destination;
+                    summary_date_departure.textContent = formated_date;
+                }
+            }
+            else if (station_departure === "Sài Gòn") {
+                if (station_destination === "Hà Nội") {
+                    if (datePicker === "2023-11-23") {
+                        if (train_name === "SE8") {
+                            SE5.style.display = "none";
+                            SE7.style.display = "none";
+                            SE8.style.display = "block";
+                            None.style.display = "none";
+                            summary_train_name_8.innerHTML = train_name;
+                            summary_departure_8.innerHTML = station_departure;
+                            summary_destination_8.innerHTML = station_destination;
+                            summary_date_departure_8.innerHTML = formated_date;
+                            summary_date_destination_8.innerHTML = formated_date_1;
+                        }
+                    }
+                    else {
+                        SE5.style.display = "none";
+                        SE7.style.display = "none";
+                        SE8.style.display = "none";
+                        None.style.display = "block";
+                        summary_departure.textContent = station_departure;
+                        summary_destination.textContent = station_destination;
+                        summary_date_departure.textContent = formated_date;
+                    }
+                }
+                else {
+                    SE5.style.display = "none";
+                    SE7.style.display = "none";
+                    SE8.style.display = "none";
+                    None.style.display = "block";
+                    summary_departure.textContent = station_departure;
+                    summary_destination.textContent = station_destination;
+                    summary_date_departure.textContent = formated_date;
+                }
+            }
+            else {
+                SE5.style.display = "none";
+                SE7.style.display = "none";
+                SE8.style.display = "none";
+                None.style.display = "block";
+                summary_departure.textContent = station_departure;
+                summary_destination.textContent = station_destination;
+                summary_date_departure.textContent = formated_date;
+            }
+        });
+    </script>
+</body>
+
+</html>
