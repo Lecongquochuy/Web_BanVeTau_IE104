@@ -16,6 +16,7 @@ html {
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif; 
     box-sizing: border-box;
+    /* background-color: #f7f9fa; */
 }
 
 .grid {
@@ -38,10 +39,36 @@ html {
     padding-right: 12px;    
     width: 8.3333%;
 }
+.grid__column_3 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 25%;
+}
+
 .grid__column_4 {
     padding-left: 12px;
     padding-right: 12px;    
     width: 33.3333%;
+}
+.grid__column_5 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 41.6666%;
+}
+.grid__column_7 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 58.3333%;
+}
+.grid__column_8 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 66.6666%;
+}
+.grid__column_9 {
+    padding-left: 12px;
+    padding-right: 12px;    
+    width: 75%;
 }
 .grid__column_10 {
     padding-left: 12px;
