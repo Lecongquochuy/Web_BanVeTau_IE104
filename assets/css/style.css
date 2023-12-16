@@ -69,7 +69,6 @@
     line-height: 38px;
     font-weight: bold;
     font-style: normal;
-
 }
 .home-icon {
         /* transition: transform 0.5s; */
@@ -108,7 +107,7 @@ li:hover .nav__more{
 
 .container {
     position: relative;
-
+    /* min-height: 100%; */
     left: 0;
     right: 0;
     background: #fff;
@@ -284,7 +283,6 @@ li:hover .nav__more{
 
 
 
-
 /* Footer */
 .footer{
     position:relative;
@@ -293,7 +291,7 @@ li:hover .nav__more{
     right: 0px;
     height: 500px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 200px;
     /* background-color: rgb(13, 8, 93); */
     background-color: rgba(28, 41, 48, 1);
     color: rgb(255, 255, 255);
