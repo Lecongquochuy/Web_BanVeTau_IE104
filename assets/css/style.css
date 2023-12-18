@@ -339,14 +339,11 @@ li:hover .nav__more {
 
 .train-station--map,
 .train-station--list {
-    /* height: 540px; */
-    /* background-color: #ccc; */
     padding: 12px;
 }
 
 .train_list {
-    /* width: 600px; */
-    max-height: 760px;
+    max-height: 650px;
     overflow-y: auto;
     margin-top: 10px;
 }
@@ -777,37 +774,54 @@ li:hover .nav__more {
 }
 
 /* More */
-
+ol.regulations li {
+    padding: 8px 0;
+    border: 1px solid #ccc;
+}
+ol.regulations li:has(ol) {
+    padding-bottom: 0;
+}
 ol.regulations{
     list-style-type: upper-roman;
     list-style-position: inside;
     font-size: 20px;
     line-height: 35px;
     text-indent: 20px;
+    margin-left: 24px;
 }
 ol.regulations__more{
     list-style-type: decimal;
     text-indent: 25px;
 }
+.regulations__more {
+    margin-top: 8px;
+}
+.regulations__more li{
+    padding-left: 24px;
+    border-left: none;
+    border-right: none;
+}
+.regulations__more li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
 .regu{
-    width: 800px;
     display: grid;
-    background-color: rgba(39, 120, 234, 0.05);
+    /* background-color: rgba(39, 120, 234, 0.05); */
     padding: 20px 5px;
     border-radius: 5px;
 }
 .regu__header{
-    font-size: 20px;
-    line-height: 30px;
-    height: 40px;
+    font-size: 2.2rem;
+    padding: 12px;
     width: fit-content;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     margin-bottom: 10px;
-    padding: 5px;
-    text-align: center;
+    text-align: left;
     color: white;
     font-weight: bold;
-    background-image: linear-gradient(to right bottom, rgb(59, 121, 234), rgb(204, 221, 251));
+    background-color: rgb(46, 104, 130);
+    /* background-image: linear-gradient(to right bottom, rgb(59, 121, 234), rgb(204, 221, 251)); */
 }
 iframe{
     height: 1050px;
@@ -830,28 +844,32 @@ a.prevent_default:hover{
     text-decoration: underline;
 }
 .box{
+    font-size: 1.6rem;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
-    margin-left: 20px;
+    gap: 10%;
 }
 .box_title{
     color: #e55a05;
     font-weight: bold;
     font-size: 20px;
-    line-height: 30px;
+    padding: 12px 0;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .info_type1{
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 16px;
     margin-bottom: 15px;
 }
 .info_type2{
-    font-size: 12px;
+    font-size: 1.4rem;
+    color: #3f3f3f;
     line-height: 16px;
+}
+.info_type2 p{
+    margin-top: 12px;
 }
 .hidden{
     visibility: hidden;
@@ -1943,6 +1961,56 @@ td.title--orange{
 .form-trave__btn:hover{
     border: 1px solid rgb(30, 0, 255);
 }
+.form-laymdc-container{
+    display: none;
+    padding: 10px 0px;
+    padding-left: 16px;
+}
+.form-laymdc-container__title{
+    margin: 10px 10px;
+}
+.form-laymdc-container__sub-title{
+    font-weight: bold;
+    font-size: 17px;
+    margin: 10px 0px;
+    color: #3a87ad;
+}
+.form-laymdc-container__content{
+    margin-left: 260px;
+    padding: 14px 0px;
+    padding-left: 16px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.form-laymdc-container__content-title{
+    font-weight: bold;
+    color: rgb(90, 86, 86);
+    padding: 12px 0px;
+    font-size: 16px;
+}
+.form-laymdc-container__content-function{
+    display: grid;
+    font-size: 15px;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+.form-laymdc-container__content-input{
+    padding: 15px 15px;
+    height: 40px;
+}
+.form-laymdc__btn{
+    height: 40px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: #54b4eb;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 17px;
+}
+.form-laymdc__btn:hover{
+    border: 1px solid rgb(30, 0, 255);
+}
 .booking__info{
     width: 100%;
     padding: 10px;
@@ -2138,6 +2206,11 @@ td.title--orange{
 }
 .done > div > a{
     color: blue;
+}
+.form-container-1{
+    position: relative;
+    top: 120px;
+    min-height: 600px;
 }
 .form-gtgv-container{
     border: 1px solid #337ab7;
