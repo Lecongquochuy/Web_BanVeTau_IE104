@@ -1961,56 +1961,6 @@ td.title--orange{
 .form-trave__btn:hover{
     border: 1px solid rgb(30, 0, 255);
 }
-.form-laymdc-container{
-    display: none;
-    padding: 10px 0px;
-    padding-left: 16px;
-}
-.form-laymdc-container__title{
-    margin: 10px 10px;
-}
-.form-laymdc-container__sub-title{
-    font-weight: bold;
-    font-size: 17px;
-    margin: 10px 0px;
-    color: #3a87ad;
-}
-.form-laymdc-container__content{
-    margin-left: 260px;
-    padding: 14px 0px;
-    padding-left: 16px;
-    width: 500px;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.form-laymdc-container__content-title{
-    font-weight: bold;
-    color: rgb(90, 86, 86);
-    padding: 12px 0px;
-    font-size: 16px;
-}
-.form-laymdc-container__content-function{
-    display: grid;
-    font-size: 15px;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
-}
-.form-laymdc-container__content-input{
-    padding: 15px 15px;
-    height: 40px;
-}
-.form-laymdc__btn{
-    height: 40px;
-    width: 100px;
-    color: rgb(255, 255, 255);
-    background-color: #54b4eb;
-    border-radius: 5px;
-    border: 0px;
-    font-size: 17px;
-}
-.form-laymdc__btn:hover{
-    border: 1px solid rgb(30, 0, 255);
-}
 .booking__info{
     width: 100%;
     padding: 10px;
@@ -2206,11 +2156,6 @@ td.title--orange{
 }
 .done > div > a{
     color: blue;
-}
-.form-container-1{
-    position: relative;
-    top: 120px;
-    min-height: 600px;
 }
 .form-gtgv-container{
     border: 1px solid #337ab7;
