@@ -6320,6 +6320,23 @@
                 $(".form-container-1").hide();
                 $("#more").hide();
                 $(".train-station").show();
+                var searchInput = document.getElementById('train-station-search-input');
+                var suggestionList = document.getElementById('suggestion-list');
+                searchInput.addEventListener('input', function () {
+                    var userInput = searchInput.value.toLowerCase();
+                    var suggestionItems = suggestionList.getElementsByClassName('suggestion-item');
+                    for (var i = 0; i < suggestionItems.length; i++) {
+                        var suggestionItem = suggestionItems[i];
+                        var suggestionContent = suggestionItem.getElementsByClassName('suggestion-item__content')[0];
+                        var suggestionTitle = suggestionContent.getElementsByClassName('train-title')[0];
+
+                        if (suggestionTitle.textContent.toLowerCase().includes(userInput)) {
+                            suggestionItem.style.display = 'flex';
+                        } else {
+                            suggestionItem.style.display = 'none';
+                        }
+                    }
+                });
             });
 
             $("#nav__booking_info").on("click", function (event) {
