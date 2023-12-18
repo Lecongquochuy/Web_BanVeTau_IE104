@@ -2189,11 +2189,6 @@ td.title--orange{
 .done > div > a{
     color: blue;
 }
-.form-container-1{
-    position: relative;
-    top: 120px;
-    min-height: 600px;
-}
 .form-gtgv-container{
     border: 1px solid #337ab7;
     border-radius: 5px;
