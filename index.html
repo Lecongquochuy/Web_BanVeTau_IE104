@@ -4252,7 +4252,7 @@
                                     </tr>
                                     <tr
                                         class="confirming__info--ticket__content-row confirming__info--ticket__content-row_default">
-                                        <td>1</td>
+                                        <td class="confirm__info--number">0</td>
                                         <td class="confirming__info--ticket-td-align-justify">
                                             <div class="confirming__info--ticket-td-display">
                                                 <div>Họ tên: <span id="customer_name_confirm_ticket"></span></div>
@@ -7286,13 +7286,19 @@
                     var confirm_text = "Hành trình: " + confirm_split_text[0] + " " + confirm_time_text + " 06:10 " + confirm_split_text[1];
                     var sourceTr = $(".confirming__info--ticket__content-row_default");
                     var cloneTr = sourceTr.clone();
+                    var confirm_list = $(".confirming__info--ticket__content-row");
+                    var number = confirm_list[confirm_list.length - 1].textContent;
+                    number = parseInt(number);
+                    number += 1;
                     cloneTr.addClass("" + i);
                     cloneTr.removeClass("confirming__info--ticket__content-row_default");
-                    cloneTr.insertAfter(sourceTr);
+                    cloneTr.insertAfter(confirm_list[confirm_list.length - 1]);
+                    
+                    $("." + i + " .confirm__info--number").text("" + number);
                     $("." + i + " .confirming__info--ticket__row--info").html(confirm_text);
                     $("#ntthk_next_btn").click(function () {
                         sourceTr.css('display', 'none');
-                    })
+                    });
                 }
                 let train_se1 = $("#train_SE1");
                 let train_se7 = $("#train_SE7");
