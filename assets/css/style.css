@@ -306,9 +306,7 @@ li:hover .nav__more {
 /* Container */
 .container .train-station{
     position: relative;
-    /* top: 120px; */
     font-size: 1.6rem;
-    height: 800px;
 }
 
 /* train station */
@@ -330,6 +328,7 @@ li:hover .nav__more {
 
 .train-station--title {
     font-size: 36px;
+    padding: 12px 0;
 }
 
 .train-station__content {
@@ -837,8 +836,8 @@ iframe.video{
 a.prevent_default{
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    line-height: 45px;
+    font-size: 2.0rem;
+    line-height: 20px;
 }
 a.prevent_default:hover{
     color: rgba(4, 4, 249,0.6);
@@ -1124,12 +1123,14 @@ td.order_history__table_th{
     width: 100%;
     height: 100%;
     background-color: #3c3d3d;
-    opacity: 0.6;
+    opacity: 0.6;   
 }
 .modal__body {
-    height: 700px;
+    min-height: 500px;
+    height: fit-content;
     width: 600px;
     margin: auto;
+    padding-bottom: 50px;
     background-color: white;
     z-index: 1;
 
@@ -1156,10 +1157,12 @@ td.order_history__table_th{
     font-size: 2.6rem;
     padding:36px 12px;
     margin: 0;
+    background-color: rgb(96, 104, 108);
+    color: #fff;
 }
 .auth-form__selected{
-    background-color: #989898;
-    color: white;
+    background-color: #fff;
+    color: #000;
 }
 .auth-form__form{
     padding: 0 20px;
@@ -1272,20 +1275,18 @@ td.order_history__table_th{
 }
 
 .other_login{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    /* padding: 8px; */
-    margin: 12px 42px;
-    height: 56px;
+    text-align: center;
+    gap: 12px;
+    padding: 24px 12px;
     color: #121;
-    font-size: 1.6rem;
-    font-style: normal;
     font-weight: 400;
-    opacity: 0.75;
+    opacity: 0.85;
 }
-.hr {
-    width: 180px;
+.other_login  .element{
+    width: 100%;
 }
 
 .auth-form__socials {
@@ -1439,8 +1440,8 @@ td.order_history__table_th{
     color: rgb(255, 0, 0);
 }
 .customer-info__content-input{
-    padding: 3px 8px;
-    font-size: 13px;
+    padding: 8px;
+    font-size: 1.4rem;
 }
 .form-muave-container__e-bill{
     margin-top: 30px;
