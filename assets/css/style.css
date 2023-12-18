@@ -124,6 +124,7 @@ li:hover .nav__more {
     background: #fff;
     font-size: 1.6rem;
     height: fit-content;
+    min-height: 600px;
 }
 
 .home {
@@ -881,7 +882,6 @@ a.prevent_default:hover{
     display: grid;
     grid-template-columns: 3fr 9fr;
     column-gap: 10px;
-    font-size: 14px;
     margin-top: 20px;
     position: relative;
     top: 120px;
