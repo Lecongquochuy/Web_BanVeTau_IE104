@@ -1,0 +1,168 @@
+/*  TABLET   */
+@media (min-width: 740px) and (max-width: 1023px) {
+   
+}
+
+/*  TABLET AND MOBILE  */
+@media (max-width: 1023px) {
+
+}
+
+/*  MOBILE   */
+@media (max-width: 739px) {
+    @keyframes moveTrain {
+        0% {
+            left: -98%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+    .footer-flex-container {
+        justify-content: center;
+    }
+    .hide-content-mobile {
+        display: none;
+    }
+    .header {
+        height: fit-content;
+    }
+    .form-home__element {
+        width: 100%;
+    }
+    .buy-ticket-content {
+        flex-direction: column;
+    }
+    .buy-ticket-nav,
+    .buy-ticket-search-info {
+        width: 100%;
+    }
+    .train-ticket-item-head {
+        padding: 8px 4px;
+    }
+    .buy-ticket-seat_style {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .buy-ticket-seat_style .cabin {
+        width: 100%;
+    }
+    .cart-ticket-item {
+        gap: 50px;
+    }
+    .form-muave-container {
+        margin: 12px;
+    }
+    .customer-info__content-input-box,
+    .e-bill__content-input-box,
+    .e-bill__content-input-box2 {
+        grid-template-columns: 1fr;
+    }
+    .customer-info__content-box {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .payment-box1 div:first-child,
+    .payment-box2 div:first-child {
+        display: flex;
+    }
+    .form-online-payment-container {
+        grid-template-columns: 1fr;
+    }
+    .form-online-payment-container .form-online-payment__content:first-child {
+        order: 2;
+    }
+    .form-online-payment-container .form-online-payment__content:last-child {
+        order: 1;
+    }
+    .train-station__head {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .train-station__content {
+        flex-direction: column;
+    }
+    .train-station__content > div {
+        width: 100%;
+    }
+    ol.regulations {
+        margin: 0 8px;
+    }
+    .box {
+        padding: 0 12px;
+        grid-template-columns: 1fr;
+    }
+    /* login */
+    .modal__body {
+        width: calc(100% - 12px);
+    }
+    #btn__register,
+    #btn__login,
+    .auth-form__controls,
+    .other_login,
+    .auth-form__socials,
+    .auth-form__group {
+        margin: 12px 0;
+        width: 100%;
+    }
+    .auth-form__socials .btn-icon {
+        width: 33.33%;
+    }
+    .auth-form__socials-icon {
+        width: 100%;
+    }
+    .auth-form__group-infor {
+        flex-direction: column;
+        gap: 12px;
+    }
+    /* account */
+    .account {
+        margin: 12px;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: calc(100% - 24px);
+    }
+    .acc__nav,
+    .acc__info {
+        width: 100%;
+    }
+    .acc__info--details {
+        grid-template-columns: 1fr;
+    }
+    div.order_history {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    table.order_history__table {
+        margin: 0 4px;
+        width: calc(100% - 8px);
+    }
+    .acc_setting_box__content {
+        grid-template-columns: 1fr;
+    }
+    .acc_setting_box__content--image {
+        order: 1;
+    } 
+    .acc_setting_box__content--text {
+        order: 2;
+    }
+    /* .acc_setting_box__content--input_box > input {
+        margin: 12px;
+        width: calc(100% - 24px);
+    } */
+    .acc_setting_box__content--input_box--password > input {
+        width: 80%;
+    }
+    .acc_setting_box__change_password {
+        grid-template-columns: 1fr;
+    }
+    .acc_setting_box__content--input_box > div {
+        margin: 12px;
+        width: calc(100% - 24px);
+    }
+}
+@media (min-width: 1024px) {
+    .hide {
+        display: none;
+    }
+}
