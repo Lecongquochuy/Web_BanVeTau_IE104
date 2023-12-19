@@ -999,6 +999,7 @@ td.order_history__table_th{
     padding: 20px;
     box-shadow: white 1px 1px 10px;
     height: fit-content;
+    z-index: 1;
 }
 .order_history__details{
     border: 1px solid blue;
