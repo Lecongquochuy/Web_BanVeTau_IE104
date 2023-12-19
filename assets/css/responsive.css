@@ -5,7 +5,19 @@
 
 /*  TABLET AND MOBILE  */
 @media (max-width: 1023px) {
-
+   .train-station__content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .train-station__content > div {
+        width: 100%;
+    }
+    .footer-flex-container {
+        justify-content: center;
+    }
+    .hide-content-mobile {
+        display: none;
+    }
 }
 
 /*  MOBILE   */
@@ -18,12 +30,7 @@
             left: 100%;
         }
     }
-    .footer-flex-container {
-        justify-content: center;
-    }
-    .hide-content-mobile {
-        display: none;
-    }
+    
     .header {
         height: fit-content;
     }
@@ -79,12 +86,7 @@
         flex-direction: column;
         gap: 16px;
     }
-    .train-station__content {
-        flex-direction: column;
-    }
-    .train-station__content > div {
-        width: 100%;
-    }
+   
     ol.regulations {
         margin: 0 8px;
     }
