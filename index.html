@@ -985,8 +985,8 @@
                                                 <div class="destination buy_ticket__destination_station">Sài Gòn</div>
                                             </div>
                                         </div>
-                                        <div class="number-seats">Chỗ còn <br> 12</div>
-                                        <div class="train-ticket-prices">1,034,000 đ</div>
+                                        <div class="number-seats">Chỗ còn <br> 116</div>
+                                        <div class="train-ticket-prices">1,301,000 đ</div>
                                         <div class="buy-train-ticket-more">
                                             <button class="train-ticket-more-btn">
                                                 <i class="fa-solid fa-chevron-down icon-down"
@@ -1001,7 +1001,7 @@
                                                 <input type="radio" name="choose-cabin-1" class="radio_cabin" checked>
                                                 <div class="cabin-content">
                                                     <div class="cabin-title">Nằm khoang 6</div>
-                                                    <div class="cabin-price">1,150,000 đ</div>
+                                                    <div class="cabin-price">1,301,000 đ</div>
                                                 </div>
                                             </div>
                                             <div class="cabin cabin_4">
@@ -2506,8 +2506,8 @@
                                                 <div class="destination buy_ticket__destination_station">Sài Gòn</div>
                                             </div>
                                         </div>
-                                        <div class="number-seats">Chỗ còn <br> 10</div>
-                                        <div class="train-ticket-prices">901,000 đ</div>
+                                        <div class="number-seats">Chỗ còn <br> 116</div>
+                                        <div class="train-ticket-prices">1,301,000 đ</div>
                                         <div class="buy-train-ticket-more">
                                             <button class="train-ticket-more-btn">
                                                 <i class="fa-solid fa-chevron-down icon-down"
@@ -2522,7 +2522,7 @@
                                                 <input type="radio" name="choose-cabin-se7" class="radio_cabin" checked>
                                                 <div class="cabin-content">
                                                     <div class="cabin-title">Nằm khoang 6</div>
-                                                    <div class="cabin-price">1,150,000 đ</div>
+                                                    <div class="cabin-price">1,301,000 đ</div>
                                                 </div>
                                             </div>
                                             <div class="cabin cabin_4">
@@ -4086,7 +4086,7 @@
                                             </div>
                                             <div class="buying__info--ticket-input-box">
                                                 <label for="" class="buying__info--ticket-label">Đối tượng</label>
-                                                <select name="" id="buying_object" class="buying__info--ticket-input">
+                                                <select name="" id="buying_object" class="buying_object0 buying__info--ticket-input">
                                                     <option value="default-option" selected disabled>Chọn đối tượng mua
                                                         vé</option>
                                                     <option value="adult">Người lớn</option>
@@ -4101,11 +4101,11 @@
                                                     placeholder="Số CCCD/ Hộ chiếu/ MSSV">
                                             </div>
                                         </td>
-                                        <td class="buying__info--ticket-td-align-right" id="ticket_cost">1,301,000</td>
-                                        <td class="buying__info--ticket-td-align-right" id="object_discount"></td>
+                                        <td class="buying__info--ticket-td-align-right ticket_cost0" id="ticket_cost">1,301,000</td>
+                                        <td class="buying__info--ticket-td-align-right object_discount0" id="object_discount"></td>
                                         <td>Không có khuyến mại cho vé này</td>
-                                        <td class="buying__info--ticket-td-align-right" id="ensurance_cost">1,000</td>
-                                        <td class="buying__info--ticket-td-align-right" id="ticket_money"></td>
+                                        <td class="buying__info--ticket-td-align-right ensurance_cost0" id="ensurance_cost">1,000</td>
+                                        <td class="buying__info--ticket-td-align-right ticket_money0" id="ticket_money"></td>
                                         <td class="buying__info--ticket-icon-remove"><i class="fa-solid fa-trash"
                                                 style="color: #005eff;"></i></td>
                                     </tr>
@@ -4287,9 +4287,9 @@
                                                 6 điều hòa T3</p>
                                         </td>
                                         <td class="buying_time"></td>
-                                        <td class="confirming__info--ticket-td-align-right" id="ticket_cost_confirm">
+                                        <td class="confirming__info--ticket-td-align-right ticket_cost_confirm0" id="ticket_cost_confirm">
                                         </td>
-                                        <td class="confirming__info--ticket-td-align-right" id="ticket_money_confirm">
+                                        <td class="confirming__info--ticket-td-align-right ticket_money_confirm0" id="ticket_money_confirm">
                                         </td>
                                     </tr>
                                     <tr class="confirming__info--ticket__row">
@@ -7128,6 +7128,7 @@
             })
 
             $(".home .search--btn").click(function () {
+                var list_ticket = [];
                 var home__station_departure_value = $("#home__station_departure");
                 var home__station_destination_value = $("#home__station_destination");
                 var home__datePicker_value = $("#home__datePicker");
@@ -7353,12 +7354,21 @@
                     var sourceTr = $(".buying__info_item1");
                     var cloneTr = sourceTr.clone();
                     cloneTr.addClass("buying__info_item " + i);
+                    list_ticket.push(i);
                     cloneTr.removeClass("buying__info_item1");
                     cloneTr.insertAfter(sourceTr);
+                    $("." + i + " .buying_object0").addClass("buying_object" + i);
+                    $("." + i +" .ticket_money0").addClass("ticket_money" + i);
+                    $("." + i + " .ticket_cost0").addClass("ticket_cost" + i);
+                    $("." + i + " .object_discount0").addClass("object_discount" + i);
+                    $("." + i + " .ensurance_cost0").addClass("ensurance_cost" + i);
                     $("." + i + " .buying__info--ticket-seat-address-info").html(cart_split_text[1]);
                     $("." + i + " .buying__info_item--train_name").html(words[0]);
                     $("." + i + " .buying__info--ticket-icon-remove").click(function () {
                         $("." + i).remove();
+                        list_ticket = $.grep(list_ticket, function (value) {
+                            return value !== i;
+                        });
                     });
                     $(".buy-ticket .btn-muave").click(function () {
                         sourceTr.css('display', 'none');
@@ -7435,6 +7445,9 @@
                                     check_2 = false;
                                     newIcon.click(function () {
                                         $("." + index).remove();
+                                        list_ticket = $.grep(list_ticket, function (value) {
+                                            return value !== i;
+                                        });
                                         $(arrSeat[index]).removeClass("ghe_dang_chon");
                                         if ($(".cart-content").find(".cart-ticket-item").length > 0)
                                             $(".cart-content").show();
@@ -7449,6 +7462,9 @@
                                 var split_text = textvalue.split(" <br> ");
                                 if (check === false) {
                                     $("." + index).remove();
+                                    list_ticket = $.grep(list_ticket, function (value) {
+                                        return value !== i;
+                                    });
                                     check = true;
                                 }
                                 else {
@@ -7465,86 +7481,78 @@
                     })(i);
                 }
 
+                var ntthk_return_btn = document.getElementById("ntthk_return_btn");
+                var ntthk_next_btn = document.getElementById("ntthk_next_btn");
+                var layve_btn = document.getElementById("layve_btn");
+                var muave_page = 0;
                 $(".buy-ticket .btn-muave").click(function () {
+                    //alert(list_ticket);
                     $("#muave_main").show();
                     $(".buy-ticket").hide();
+                    var ticket_money_sum = 0;
+                    //var ticket_money_summary = $("#ticket_money_summary");
+                    for (var i = 0; i < list_ticket.length; i++) {
+                        var buying_object = $(".buying_object" + list_ticket[i]);
+                        var ticket_money = $(".ticket_money" + list_ticket[i]);
+                        var ticket_cost = $(".ticket_cost" + list_ticket[i]).text();
+                        //var sum = 0;
+                        $(".buying_object" + list_ticket[i]).on("change", (function (i) {
+                            return function () {
+                                var object_discount = $(".object_discount" + list_ticket[i]);
+                                var ensurance_cost = $(".ensurance_cost" + list_ticket[i]).text();
+                                console.log(list_ticket[i]);
+
+                                console.log(ticket_cost);
+                                ticket_cost = $(".ticket_cost" + list_ticket[i]).text().replace(/,/g, "");
+                                //ticket_cost = parseInt(ticket_cost);
+                                console.log(ticket_cost);
+                                ensurance_cost = ensurance_cost.replace(/,/g, "");
+                                ensurance_cost = parseInt(ensurance_cost);
+                                var sum = 0
+                                var discount = 0;
+                                console.log($(".buying_object" + list_ticket[i]).val());
+                                if ($(".buying_object" + list_ticket[i]).val() === "adult") {
+                                    discount = 0;
+                                    sum = ticket_cost - discount + ensurance_cost;
+                                } 
+                                else if ($(".buying_object" + list_ticket[i]).val() === "student") {
+                                    discount = ticket_cost / 10;
+                                    discount = parseInt(discount);
+                                    sum = ticket_cost - discount + ensurance_cost;
+                                } 
+                                else {
+                                    discount = ticket_cost / 3.3;
+                                    discount = parseInt(discount);
+                                    sum = ticket_cost - discount + ensurance_cost;
+                                }
+
+                                discount = discount.toLocaleString();
+                                sum = sum.toLocaleString();
+                                $(".object_discount" + list_ticket[i]).text(discount);
+                                $(".ticket_money" + list_ticket[i]).text(sum);
+                                var ticket_money_sum = 0;
+                                var count = 0;
+                                $(".ticket_money0").each(function () {
+                                    if (count > 0) {
+                                        var value = $(this).text().replaceAll(".", "");
+                                        console.log($(this).text());
+                                        ticket_money_sum += parseInt(value);
+                                    }
+                                    count++;
+                                });
+                                $("." + list_ticket[i] + " .ticket_money_confirm0").text(sum);
+                                $("." + list_ticket[i] + " .ticket_cost_confirm0").text(ticket_cost.toLocaleString());
+                                console.log(ticket_money_sum);
+                                $("#ticket_money_summary").text(ticket_money_sum.toLocaleString());
+                                //$("#ticket_money_summary").text(ticket_money_sum.toLocaleString());
+                            };
+                        })(i));                        
+                    }
                     for (var i = 0; i < buying_time_countdown.length; i++) {
                         startCountdown(300, buying_time_countdown[i]);
                     }
-                })
-
-                var ntthk_return_btn = document.getElementById("ntthk_return_btn");
-                var ntthk_next_btn = document.getElementById("ntthk_next_btn");
-                var buying_object = document.getElementById("buying_object");
-                var layve_btn = document.getElementById("layve_btn");
-                var muave_page = 0;
-
-                var ticket_money = document.getElementById("ticket_money");
-                var ticket_money_summary = document.getElementById("ticket_money_summary");
-                var ticket_cost = document.getElementById("ticket_cost").textContent;
-
-                buying_object.addEventListener("change", function () {
-                    var object_discount = document.getElementById("object_discount");
-                    var ensurance_cost = document.getElementById("ensurance_cost").textContent;
-
-                    ticket_cost = ticket_cost.replaceAll(",", "");
-                    ticket_cost = ticket_cost.slice(0, ticket_cost.length - 3);
-                    ticket_cost = parseInt(ticket_cost);
-
-                    ensurance_cost = ensurance_cost.replace(",", "");
-                    ensurance_cost = ensurance_cost.slice(0, ensurance_cost.length - 3);
-                    ensurance_cost = parseInt(ensurance_cost);
-                    var discount = 0;
-                    var sum = 0;
-
-                    if (buying_object.value === "adult") {
-                        discount = 0;
-                        sum = ticket_cost - discount + ensurance_cost;
-                        sum = sum * 1000;
-                        sum = sum.toString();
-                        sum = sum.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        object_discount.innerHTML = discount;
-                        ticket_money.innerHTML = sum;
-                        ticket_money_summary.innerHTML = sum;
-                    }
-                    else if (buying_object.value === "student") {
-                        discount = ticket_cost / 10;
-                        discount = parseInt(discount);
-                        sum = ticket_cost - discount + ensurance_cost;
-                        sum = sum * 1000;
-                        sum = sum.toString();
-                        sum = sum.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        discount = discount * 1000;
-                        discount = discount.toString();
-                        discount = discount.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        object_discount.innerHTML = discount;
-                        ticket_money.innerHTML = sum;
-                        ticket_money_summary.innerHTML = sum;
-                    }
-                    else {
-                        discount = ticket_cost / 3.3;
-                        discount = parseInt(discount);
-                        sum = ticket_cost - discount + ensurance_cost;
-                        sum = sum * 1000;
-                        sum = sum.toString();
-                        sum = sum.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        discount = discount * 1000;
-                        discount = discount.toString();
-                        discount = discount.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                        object_discount.innerHTML = discount;
-                        ticket_money.innerHTML = sum;
-                        ticket_money_summary.innerHTML = sum;
-                    }
-                    ticket_cost = ticket_cost * 1000;
-                    ticket_cost = ticket_cost.toString();
-                    ticket_cost = ticket_cost.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 });
 
-                //$(document).ready(function () {
-                /*
-            var buying_time_countdown = document.getElementsByClassName("buying_time");
-            startCountdown(300, buying_time_countdown[0]);
-            startCountdown(300, buying_time_countdown[1]);*/
                 $("#ntthk").show();
                 $("#xntt").hide();
                 $("#online_payment").hide();
