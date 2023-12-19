@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vé Tàu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../Web_BanVeTau_IE104-main/assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/final.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -73,7 +73,7 @@
                 </div>
                 <div class="mobile mobile-tablet__hide_nav">
                     <i class="fa-solid fa-bars " class=""id="web__menu"></i>
-                    <img src="../2/assets/img/logo_tau.png" alt="" id="web__logo" class="header__log--webname--logo">
+                    <img src="./assets/img/logo_tau.png" alt="" id="web__logo" class="header__log--webname--logo">
                     <i class="fas fa-user-circle" id="mobile__account"></i>
                 </div>
                 <div class="mobile__nav mobile-tablet__hide_nav">
@@ -352,7 +352,7 @@
                     <div class="acc__info">
                         <div class="acc__info--details">
                             <div class="acc__info--details--left_side">
-                                <img src="../DoAn/images/yuji.jpg" alt="" id="avatar_acc" class="avatar_acc">
+                                <img src="./assets/img/qrcode_vnpay.vn.png" alt="" id="avatar_acc" class="avatar_acc">
                                 <p><span id="acc_first_name">Daniel</span> <span id="acc_last_name">Levy</span></p>
                                 <p class="blue__color" id="acc__info--setting">Chỉnh sửa thông tin</p>
                             </div>
@@ -4081,7 +4081,7 @@
                                             <div class="buying__info--ticket-input-box">
                                                 <label for="" class="buying__info--ticket-label">Họ tên</label>
                                                 <input type="text" name="" id="buying_name"
-                                                    class="buying__info--ticket-input"
+                                                    class="buying__info--ticket-input buying_name"
                                                     placeholder="Thông tin hành khách">
                                             </div>
                                             <div class="buying__info--ticket-input-box">
@@ -4097,7 +4097,7 @@
                                             <div class="buying__info--ticket-input-box">
                                                 <label for="" class="buying__info--ticket-label">Số giấy tờ</label>
                                                 <input type="text" name="" id="buying_license"
-                                                    class="buying__info--ticket-input"
+                                                    class="buying__info--ticket-input buying_license"
                                                     placeholder="Số CCCD/ Hộ chiếu/ MSSV">
                                             </div>
                                         </td>
@@ -4277,9 +4277,9 @@
                                         <td class="confirm__info--number">0</td>
                                         <td class="confirming__info--ticket-td-align-justify">
                                             <div class="confirming__info--ticket-td-display">
-                                                <div>Họ tên: <span id="customer_name_confirm_ticket"></span></div>
-                                                <div>Đối tượng: <span id="buying_object_ticket"></span></div>
-                                                <div>Số giấy tờ: <span id="customer_license_confirm_ticket"></span>
+                                                <div>Họ tên: <span class="customer_name_confirm_ticket" id="customer_name_confirm_ticket"></span></div>
+                                                <div>Đối tượng: <span class="buying_object_ticket" id="buying_object_ticket"></span></div>
+                                                <div>Số giấy tờ: <span class="customer_license_confirm_ticket" id="customer_license_confirm_ticket"></span>
                                                 </div>
                                             </div>
                                             <p class="confirming__info--ticket__row--info">Hành trình: SE7 Hà Nội - Sài
@@ -4354,13 +4354,12 @@
                                     <div>073012</div>
                                     <hr class="form-online-payment__line">
                                     <div class="form-online-payment__title">Chuyến tàu</div>
-                                    <div>30 thg 12, 2023</div>
-                                    <div>Hà Nội <i class="fa-solid fa-arrow-right" style="color: #000000;"></i> Sài Gòn
-                                    </div>
+                                    <div class="form-online-payment__date">23 thg 12, 2023</div>
+                                    <div class="form-online-payment__trip">Hà Nội - Sài Gòn</div>
                                     <hr class="form-online-payment__line">
-                                    <div class="form-online-payment__title">Hành khách</div>
+                                    <div class="form-online-payment__title">Người đặt</div>
                                     <div id="online_payment_name"></div>
-                                    <div id="online_payment_object"></div>
+                                    <!-- <div id="online_payment_object"></div> -->
                                 </div>
                             </div>
                         </form>
@@ -4405,13 +4404,12 @@
                                     <div>073012</div>
                                     <hr class="form-online-payment__line">
                                     <div class="form-online-payment__title">Chuyến tàu</div>
-                                    <div>30 thg 12, 2023</div>
-                                    <div>Hà Nội <i class="fa-solid fa-arrow-right" style="color: #000000;"></i> Sài Gòn
-                                    </div>
+                                    <div class="form-online-payment__date">23 thg 12, 2023</div>
+                                    <div class="form-online-payment__trip">Hà Nội - Sài Gòn</div>
                                     <hr class="form-online-payment__line">
-                                    <div class="form-online-payment__title">Hành khách</div>
+                                    <div class="form-online-payment__title">Người đặt</div>
                                     <div id="qr_payment_name"></div>
-                                    <div id="qr_payment_object"></div>
+                                    <!-- <div id="qr_payment_object"></div> -->
                                 </div>
                             </div>
                         </form>
@@ -4967,7 +4965,7 @@
                                     id="gtgv__station_departure" list="stationList" placeholder="Chọn ga đi" required>
                                 <datalist id="stationList"></datalist>
                             </div>
-                            <div>
+                            <div class="pc__hide_nav">
                                 <i class="fa-sharp fa-solid fa-forward form-gtgv-container__selective-box-forward"
                                     style="color: #84868b;"></i>
                             </div>
@@ -4984,7 +4982,7 @@
                                 <input type="date" class="form-gtgv__element--input form-gtgv__input"
                                     id="gtgv__datePicker" name="date" placeholder="Chọn ngày">
                             </div>
-                            <div>
+                            <div class="pc__hide_nav">
                                 <i class="fa-sharp fa-solid fa-forward form-gtgv-container__selective-box-forward"
                                     style="color: #84868b;"></i>
                             </div>
@@ -6299,6 +6297,22 @@
             const translateValue = -currentIndex * 365;
             carousel.style.transform = `translateX(${translateValue}px)`;
         }
+        var show_return_date = document.getElementById("show-return-date");
+        show_return_date.addEventListener('change', function () {
+            var content = document.getElementById("datePicker-return");
+            if (this.checked)
+                content.style.display = "block";
+            else
+                content.style.display = "none";
+        });
+        function toggleContent()
+        {
+            var content = document.getElementById("hidenContent");
+            if (content.style.display === "none")
+                content.style.display = "block";
+            else
+                content.style.display = "none";
+        }
         $(document).ready(function () {
             function mobile__hide_nav() {
                 $(".mobile__nav--ul").animate({
@@ -7150,12 +7164,16 @@
                 $(".buy_ticket__full_date_start").text(buy_ticket__full_date_start_text);
                 $(".buy_ticket__departure_station").text(buy_ticket__station_departure_value.val());
                 $(".buy_ticket__destination_station").text(buy_ticket__station_destination_value.val());
+                $(".form-online-payment__date").text(buy_ticket__full_date_start_text);
+                $(".form-online-payment__trip").text(buy_ticket__station_departure_value.val() + " - " + buy_ticket__station_destination_value.val());
                 $(".buy-ticket .search--btn").click(function () {
                     $(".buy_ticket__date_start").text(buy_ticket__date_start_text);
                     $(".buy_ticket__full_date_start").text(buy_ticket__full_date_start_text);
                     $(".buy_ticket__departure_station").text(buy_ticket__station_departure_value.val());
                     $(".buy_ticket__destination_station").text(buy_ticket__station_destination_value.val());
-                })
+                    $(".form-online-payment__date").text(buy_ticket__full_date_start_text);
+                    $(".form-online-payment__trip").text(buy_ticket__station_departure_value.val() + " - " + buy_ticket__station_destination_value.val());
+                });
 
                 $(".home").hide();
                 $(".buy-ticket").show();
@@ -7512,15 +7530,33 @@
                                 var discount = 0;
                                 console.log($(".buying_object" + list_ticket[i]).val());
                                 if ($(".buying_object" + list_ticket[i]).val() === "adult") {
+                                    var name_text = $("." + list_ticket[i] + " .buying_name").val();
+                                    var liscense_text = $("." + list_ticket[i] + " .buying_license").val();
+                                    var select_text = "Người lớn";
+                                    $("." + list_ticket[i] + " .customer_name_confirm_ticket").text(name_text);
+                                    $("." + list_ticket[i] + " .buying_object_ticket").text(select_text);
+                                    $("." + list_ticket[i] + " .customer_license_confirm_ticket").text(""+liscense_text);
                                     discount = 0;
                                     sum = ticket_cost - discount + ensurance_cost;
                                 } 
                                 else if ($(".buying_object" + list_ticket[i]).val() === "student") {
+                                    var name_text = $("." + list_ticket[i] + " .buying_name").val();
+                                    var liscense_text = $("." + list_ticket[i] + " .buying_license").val();
+                                    var select_text = "Sinh viên";
+                                    $("." + list_ticket[i] + " .customer_name_confirm_ticket").text(name_text);
+                                    $("." + list_ticket[i] + " .buying_object_ticket").text(select_text);
+                                    $("." + list_ticket[i] + " .customer_license_confirm_ticket").text(""+liscense_text);
                                     discount = ticket_cost / 10;
                                     discount = parseInt(discount);
                                     sum = ticket_cost - discount + ensurance_cost;
                                 } 
                                 else {
+                                    var name_text = $("." + list_ticket[i] + " .buying_name").val();
+                                    var liscense_text = $("." + list_ticket[i] + " .buying_license").val();
+                                    var select_text = "Trẻ em";
+                                    $("." + list_ticket[i] + " .customer_name_confirm_ticket").text(name_text);
+                                    $("." + list_ticket[i] + " .buying_object_ticket").text(select_text);
+                                    $("." + list_ticket[i] + " .customer_license_confirm_ticket").text(""+liscense_text);
                                     discount = ticket_cost / 3.3;
                                     discount = parseInt(discount);
                                     sum = ticket_cost - discount + ensurance_cost;
@@ -7697,6 +7733,7 @@
                             if (payment_option_1 === true) {
                                 $("#online_payment").show();
                                 online_payment_name.innerHTML = customer_name;
+                                qr_payment_name.innerHTML = customer_name;
                                 if (buying_object.value === "adult") {
                                     online_payment_object.innerHTML = "Người lớn";
                                 }
