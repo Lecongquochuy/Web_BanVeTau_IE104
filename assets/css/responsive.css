@@ -237,20 +237,30 @@
         margin: 12px;
         width: calc(100% - 24px);
     }
+   .form-ttdc-container__title {
+        margin: 0px;
+    }
    .form-ttdc-container__content {
         margin-left: 0px;
         padding-left: 0px;
-        width: fit-content;
+        width: 100%;
+    }
+    .form-ttdc-container__content-login {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .form-ttdc-container__content-title {
+        text-align: left;
     }
     .form-ttdc-container__content-input {
-        width: 200px;
+        width: calc(100% - 24px);
         border: 1px solid black;
     }
     .form-ttdc__btn {
         margin-left: 70px;
     }
     .form-ttdc-container__content-btn {
-        width: 450px;
+        width: 100%;
     }
     .form-ttdc-booking__info--ticket {
         font-size: 11px;
@@ -259,27 +269,45 @@
         gap: 10px;
         font-size: 13px;
     }
+    .form-laymdc-container__title {
+        margin: 0px;
+    }
     .form-laymdc-container__content {
         margin-left: 0px;
+        padding-left: 0px;
+        width: 100%;
     }
     .form-laymdc-container__content-function {
         grid-template-columns: 2fr;
     }
     .form-laymdc-container__content-input{
-        width: 370px;
+        width: calc(100% - 24px);
+        border: 1px solid black;
+    }
+    .form-trave-container__title {
+        margin: 0px;
+        padding: 0px 12px;
     }
     .form-trave-container__content {
         margin-left: 0px;
+        padding-left: 0px;
+        width: 100%;
+    }
+    .form-trave-container__content-login {
+        grid-template-columns: 1fr;
+    }
+    .form-trave-container__content-title {
+        text-align: left;
     }
     .form-trave-container__content-input {
-        width: 200px;
+        width: calc(100% - 24px);
         border: 1px solid black;
     }
     .form-trave__btn {
         margin-left: 70px;
     }
     .form-trave-container__content-btn {
-        width: 450px;
+        width: 100%;
     }
     .notice {
         height: 80px;
@@ -288,14 +316,24 @@
     .booking__info--ticket {
         font-size: 11px;
     }
-    .ticket__cashback {
-        width: 400px;
+    .cashback {
+        min-width: 0px;
+        width: calc(100% - 30px);
     }
+    .cashback__method {
+        width: 100%;
+    }
+    .cashback__method--check {
+        padding-right: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
     .form-trave-container__line-container {
         margin: auto;
     }
     .button_xacnhan {
-        margin-left: 270px;
+        margin-left: auto;
     }
     .form-trave-container__done-notice {
         padding: 5px 5px;
@@ -321,6 +359,10 @@
     }
     .form-gtgv__btn {
         margin-left: 150px;
+    }
+    .form-gtgv__element {
+        grid-template-columns: 1fr;
+        gap: 5px;
     }
     .form-gtgv-container__summary-box-none {
         line-height: 1.2;
