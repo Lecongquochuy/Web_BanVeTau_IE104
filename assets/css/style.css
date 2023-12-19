@@ -1674,7 +1674,7 @@ td.order_history__table_th{
     margin: 10px 0px;
 }
 .form-ttdc-container__content{
-    margin-left: 300px;
+    margin: auto;
     padding: 14px 0px;
     padding-left: 16px;
     width: 500px;
@@ -1830,7 +1830,7 @@ td.title--orange{
     color: #3a87ad;
 }
 .form-laymdc-container__content{
-    margin-left: 260px;
+    margin: auto;
     padding: 14px 0px;
     padding-left: 16px;
     width: 500px;
@@ -1915,7 +1915,7 @@ td.title--orange{
     font-size: 15px;
 }
 .form-trave-container__content{
-    margin-left: 260px;
+    margin: auto;
     padding: 14px 0px;
     padding-left: 16px;
     width: 500px;
