@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vé Tàu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../Web_BanVeTau_IE104-main/assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/final.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -73,7 +73,7 @@
                 </div>
                 <div class="mobile mobile-tablet__hide_nav">
                     <i class="fa-solid fa-bars " class=""id="web__menu"></i>
-                    <img src="../2/assets/img/logo_tau.png" alt="" id="web__logo" class="header__log--webname--logo">
+                    <img src="./assets/img/logo_tau.png" alt="" id="web__logo" class="header__log--webname--logo">
                     <i class="fas fa-user-circle" id="web__sign_in_up--icon" class="sign_in"></i>
                 </div>
                 <div class="mobile__nav mobile-tablet__hide_nav">
@@ -7040,21 +7040,6 @@
                 });
                 function format_css() {
                     $(".order_history__details").addClass("modal");
-                    $(".order_history__details").css("padding", "0");
-                    $(".order_history__details").css("border", "none");
-                    $("#order_history__details").addClass("modal");
-                    $("#order_history__details").css("background-color", "white");
-                    $("#order_history__details").css("display", "grid");
-                    $("#order_history__details").css("width", "600px");
-                    $("#order_history__details").css("margin", "auto");
-                    $("#order_history__details").css("min-width", "fit-content");
-                    $("#order_history__details").css("text-indent", "0");
-                    $("#order_history__details").css("border-radius", "5px");
-                    $("#order_history__details").css("padding", "20px");
-                    $("#order_history__details").css("box-shadow", "1px 1px 10px white");
-                    $(".title--orange").css("text-indent", "0");
-                    $(".order_history__details--box").css("text-indent", "0");
-                    $("#order_history__details").css("height", "fit-content");
                 }
                 $(".modal__overlay").click(function () {
                     $(".order_history__details").hide();
@@ -7748,8 +7733,6 @@
                 });
 
             });
-
-
         });
     </script>
 </body>
