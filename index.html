@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vé Tàu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/final.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../Web_BanVeTau_IE104-main/assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2-web/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -17,7 +17,7 @@
     <div class="app">
         <header class="header">
             <div class="grid">
-                <div class="header__log">
+                <div class="header__log pc__hide_nav">
                     <div class="header__log--webname">
                         <a href="#" class="">
                             <img src="./assets/img/logo_tau.png" alt="" class="header__log--webname--logo">
@@ -25,14 +25,14 @@
                         </a>
                     </div>
                     <div class="header--info">
-                        <div class="header__log--btn" id="help">
+                        <div class="header__log--btn" class="help">
                             <a href=""><i class="far fa-question-circle"></i> Hỗ trợ</a>
                         </div>
                         <div class="header--info" id="header__sign">
-                            <div class="header__log--btn" id="sign_in">
+                            <div class="header__log--btn sign_in">
                                 <a href=""><i class="fas fa-user-circle"></i> Đăng nhập</a>
                             </div>
-                            <div class="header__log--btn" id="sign_up">
+                            <div class="header__log--btn sign_up">
                                 <a href=""><i class="far fa-user-circle"></i> Đăng ký</a>
                             </div>
                         </div>
@@ -41,34 +41,56 @@
                         </div>
                     </div>
                 </div>
-                <div class="nav">
+                <div class="nav pc__hide_nav">
                     <ul class="nav__ul">
                         <li>
-                            <a href="" id="home-icon"><i class="fas fa-home"></i></a>
+                            <a href="" class="home-icon"><i class="fas fa-home"></i></a>
                         </li>
                         <li>
-                            <a href="" id="nav__find_ticket">Tìm vé</a>
+                            <a href="" class="nav__find_ticket">Tìm vé</a>
                         </li>
                         <li>
-                            <a href="" id="nav__booking_info">Thông tin đặt chỗ</a>
+                            <a href="" class="nav__booking_info">Thông tin đặt chỗ</a>
                         </li>
                         <li>
-                            <a href="" id="nav__return_ticket">Trả vé</a>
+                            <a href="" class="nav__return_ticket">Trả vé</a>
                         </li>
                         <li>
-                            <a href="" id="nav__timetable_price">Giờ Tàu - Giá vé</a>
+                            <a href="" class="nav__timetable_price">Giờ Tàu - Giá vé</a>
                         </li>
                         <li>
-                            <a href="" id="nav__train-station">Hành trình tàu</a>
+                            <a href="" class="nav__train-station">Hành trình tàu</a>
                         </li>
                         <li style="height: 45px;">
-                            <a href="" class="nav__more" id="nav__more">More</a>
+                            <a href="" class="nav__more" class="nav__more">More</a>
                             <ul class="nav__more">
-                                <li><a href="" id="nav__regulations">Quy định</a></li>
-                                <li><a href="" id="nav__guide">Hướng dẫn</a></li>
-                                <li><a href="" id="nav__contact">Liên hệ</a></li>
+                                <li><a href="" class="nav__regulations">Quy định</a></li>
+                                <li><a href="" class="nav__guide">Hướng dẫn</a></li>
+                                <li><a href="" class="nav__contact">Liên hệ</a></li>
                             </ul>
                         </li>
+                    </ul>
+                </div>
+                <div class="mobile mobile-tablet__hide_nav">
+                    <i class="fa-solid fa-bars " class=""id="web__menu"></i>
+                    <img src="../2/assets/img/logo_tau.png" alt="" id="web__logo" class="header__log--webname--logo">
+                    <i class="fas fa-user-circle" id="web__sign_in_up--icon" class="sign_in"></i>
+                </div>
+                <div class="mobile__nav mobile-tablet__hide_nav">
+                    <div class="modal__overlay"></div>
+                    <ul class="mobile__nav--ul modal">
+                        <li class="home-icon"><i class="fa-solid fa-house"></i>Trang chủ</li>
+                        <li class="nav__find_ticket"><i class="fa-solid fa-magnifying-glass"></i>Tìm vé</li>
+                        <li class="nav__booking_info"><i class="fa-regular fa-bookmark"></i>Thông tin đặt chỗ</li>
+                        <li class="nav__return_ticket"><i class="fa-solid fa-ticket"></i>Trả vé</li>
+                        <li class="nav__timetable_price"><i class="fa-regular fa-calendar"></i>Giờ Tàu - Giá vé</li>
+                        <li class="nav__train-station"><i class="fa-solid fa-map-location-dot"></i>Hành trình tàu</li>
+                        <li class="nav__regulations"><i class="fa-solid fa-book-atlas"></i>Quy định</li>
+                        <li class="nav__guide"><i class="far fa-question-circle"></i>Hướng dẫn</li>
+                        <li class="nav__contact"><i class="fa-regular fa-address-book"></i>Liên hệ</li>
+                        <li class="help"><i class="far fa-question-circle"></i>Hỗ trợ</li>
+                        <li class="header__sign sign_in"><i class="fa-solid fa-user"></i>Đăng nhập</li>
+                        <li class="header__sign sign_up"><i class="fa-regular fa-user"></i>Đăng ký</li>
                     </ul>
                 </div>
             </div>
@@ -4932,7 +4954,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-container" id="gtgv">
+                <div class="form-container-1" id="gtgv">
                     <div class="form-gtgv-container">
                         <div class="form-gtgv-container__title">
                             <i class="fa-regular fa-clock" style="color: #ffffff;"> </i> Thông tin hành trình
@@ -6278,9 +6300,35 @@
             carousel.style.transform = `translateX(${translateValue}px)`;
         }
         $(document).ready(function () {
+            function mobile__hide_nav() {
+                $(".mobile__nav--ul").animate({
+                    width: "toggle"                    
+                }, 200);
+                $(".mobile__nav--ul li").attr("visibility","hidden");
+                setTimeout(function(){$(".mobile__nav--ul").removeClass("modal")}, 300)
+                $(".modal__overlay").fadeOut(300);
+                $(".mobile__nav").css("min-height","0");
+            }
+            function mobile__show_nav() {
+                $(".mobile__nav--ul").animate({
+                    width: "toggle"
+                }, 200);
+                $(".mobile__nav--ul li").attr("visibility","visible");
+                $(".mobile__nav").css("min-height","1000px");
+                $(".mobile__nav--ul").addClass("modal");
+                $(".modal__overlay").fadeIn(100);
+            }
+            mobile__hide_nav();
+            $("#web__menu").click(function(){
+                mobile__show_nav();
+            })
+            $(".modal__overlay").click(function () {
+                mobile__hide_nav();
+            })
             $(".train-station").hide();
             $(".buy-ticket").hide();
             $(".form-container").hide();
+            $(".form-container-1").hide();
             $("#more").hide();
             var stationList = document.getElementById("stationList");
             var stations = [
@@ -6311,34 +6359,18 @@
                 trainList.appendChild(option);
             });
 
-            $("#nav__train-station").click(function (e) {
+            $(".nav__train-station").click(function (e) {
                 e.preventDefault();
                 $(".home").hide();
                 $(".account").hide();
                 $(".buy-ticket").hide();
                 $(".form-container").hide();
+                $(".form-container-1").hide();
                 $("#more").hide();
                 $(".train-station").show();
-                var searchInput = document.getElementById('train-station-search-input');
-                var suggestionList = document.getElementById('suggestion-list');
-                searchInput.addEventListener('input', function () {
-                    var userInput = searchInput.value.toLowerCase();
-                    var suggestionItems = suggestionList.getElementsByClassName('suggestion-item');
-                    for (var i = 0; i < suggestionItems.length; i++) {
-                        var suggestionItem = suggestionItems[i];
-                        var suggestionContent = suggestionItem.getElementsByClassName('suggestion-item__content')[0];
-                        var suggestionTitle = suggestionContent.getElementsByClassName('train-title')[0];
-
-                        if (suggestionTitle.textContent.toLowerCase().includes(userInput)) {
-                            suggestionItem.style.display = 'flex';
-                        } else {
-                            suggestionItem.style.display = 'none';
-                        }
-                    }
-                });
             });
 
-            $("#nav__booking_info").on("click", function (event) {
+            $(".nav__booking_info").on("click", function (event) {
                 event.preventDefault();
                 $(".train-station").hide();
                 $(".home").hide();
@@ -6382,7 +6414,7 @@
                     ttdc_laymdc.style.display = "none";
                 });
             });
-            $("#nav__return_ticket").on("click", function (event) {
+            $(".nav__return_ticket").on("click", function (event) {
                 event.preventDefault();
                 $(".home").hide();
                 $("#train-station").hide();
@@ -6448,7 +6480,7 @@
                     }
                 });
             });
-            $("#nav__timetable_price").on("click", function (event) {
+            $(".nav__timetable_price").on("click", function (event) {
                 event.preventDefault();
                 $(".train-station").hide();
                 $(".home").hide();
@@ -6612,10 +6644,10 @@
                 });
             });
 
-            $("#nav__more").on("click", function (event) {
+            $(".nav__more").on("click", function (event) {
                 event.preventDefault();
             });
-            $("#nav__regulations").on("click", function (event) {
+            $(".nav__regulations").on("click", function (event) {
                 event.preventDefault();
                 $(".train-station").hide();
                 $(".account").hide();
@@ -6689,7 +6721,7 @@
                     $("#condition_of_use").hide();
                 });
             });
-            $("#nav__guide").on("click", function (event) {
+            $(".nav__guide").on("click", function (event) {
                 event.preventDefault();
                 $(".train-station").hide();
                 $(".home").hide();
@@ -6753,7 +6785,7 @@
 
                 });
             });
-            $("#nav__contact").on("click", function (event) {
+            $(".nav__contact").on("click", function (event) {
                 event.preventDefault();
                 $(".train-station").hide();
                 $(".home").hide();
@@ -6772,7 +6804,7 @@
             $("#sign_in_up__container").hide();
             $("#sign_in__content").hide();
             $("#sign_up__content").hide();
-            $("#sign_in").click(function (e) {
+            $(".sign_in").click(function (e) {
                 e.preventDefault();
                 $("#sign_up--form__btn").removeClass("auth-form__selected");
                 $("#sign_in--form__btn").addClass("auth-form__selected");
@@ -6781,7 +6813,7 @@
                 $("#sign_up__content").hide();
                 $("#sign_in__content").show();
             })
-            $("#sign_up").click(function (e) {
+            $(".sign_up").click(function (e) {
                 e.preventDefault();
                 $("#sign_in--form__btn").removeClass("auth-form__selected");
                 $("#sign_up--form__btn").addClass("auth-form__selected");
@@ -6824,30 +6856,30 @@
                 $("#Account").text($("#acc_last_name").text());
             })
 
-            $("#nav__find_ticket").click(function (e) {
+            $(".nav__find_ticket").click(function (e) {
                 e.preventDefault();
+                $(".home").show();
+                $(".account").hide();
+                $(".buy-ticket").hide();
+                $(".form-container").hide();
+                $("#more").hide();
+                $(".train-station").hide();
+            })
+            $(".home-icon").click(function (e) {
+                e.preventDefault();
+                $(".account").hide();
                 $(".home").show();
                 $(".buy-ticket").hide();
                 $(".form-container").hide();
                 $("#more").hide();
                 $(".train-station").hide();
-                $(".account").hide();
             })
-            $("#home-icon").click(function (e) {
-                e.preventDefault();
-                $(".home").show();
-                $(".buy-ticket").hide();
-                $(".form-container").hide();
-                $("#more").hide();
-                $(".train-station").hide();
-                $(".account").hide();
-            })
-            // thay cái này cho cái account.click cũ
             $("#Account").click(function (e) {
                 e.preventDefault();
                 $(".home").hide();
                 $(".buy-ticket").hide();
                 $(".form-container").hide();
+                $(".form-container-1").hide();
                 $("#more").hide();
                 $(".train-station").hide();
                 $(".account").show();
@@ -7295,7 +7327,7 @@
                     cloneTr.addClass("" + i);
                     cloneTr.removeClass("confirming__info--ticket__content-row_default");
                     cloneTr.insertAfter(confirm_list[confirm_list.length - 1]);
-                    
+
                     $("." + i + " .confirm__info--number").text("" + number);
                     $("." + i + " .confirming__info--ticket__row--info").html(confirm_text);
                     $("#ntthk_next_btn").click(function () {
