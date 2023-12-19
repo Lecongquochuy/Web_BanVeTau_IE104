@@ -29,7 +29,7 @@
         height: 0;
     }
     .container{
-        top: 0;
+        top:55px;
     }
     *{
         padding: 0;
@@ -207,6 +207,12 @@
     table.order_history__table {
         margin: 0 4px;
         width: calc(100% - 8px);
+    }
+    #order_history__details {
+        width: 100%;
+    }
+    .order_history__details {
+        padding: 0;
     }
     .acc_setting_box__content {
         grid-template-columns: 1fr;
