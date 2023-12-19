@@ -6328,7 +6328,7 @@
             })
             $(".train-station").hide();
             $(".buy-ticket").hide();
-            $(".form-container").hide();
+            $(".form-container").hide();            
             $("#more").hide();
             var stationList = document.getElementById("stationList");
             var stations = [
@@ -6364,7 +6364,7 @@
                 $(".home").hide();
                 $(".account").hide();
                 $(".buy-ticket").hide();
-                $(".form-container").hide();
+                $(".form-container").hide();                
                 $("#more").hide();
                 $(".train-station").show();
                 mobile__hide_nav();
@@ -6377,9 +6377,8 @@
                 $(".account").hide();
                 $(".buy-ticket").hide();
                 $("#more").hide();
+                $(".form-container").hide();
                 $("#ttdc_main").show();
-                $("#trave").hide();
-                $("#gtgv").hide();
                 mobile__hide_nav();
                 var ttdc_detail = document.getElementById("ttdc_detail");
                 var ttdc_btn = document.getElementById("ttdc_btn");
@@ -6422,9 +6421,8 @@
                 $(".account").hide();
                 $(".buy-ticket").hide();
                 $("#more").hide();
-                $("#ttdc_main").hide();
+                $(".form-container").hide();
                 $("#trave").show();
-                $("#gtgv").hide();
                 mobile__hide_nav();
                 var trave_link = document.getElementById("trave_link");
                 var chonvetra = document.getElementById("chonvetra");
@@ -6489,8 +6487,7 @@
                 $(".account").hide();
                 $(".buy-ticket").hide();
                 $("#more").hide();
-                $("#ttdc_main").hide();
-                $("#trave").hide();
+                $(".form-container").hide();
                 $("#gtgv").show();
                 mobile__hide_nav();
                 var None = document.getElementById("None");
@@ -6565,7 +6562,6 @@
                                 $(".date_0").text(lay_ngay(date_0));
                                 $(".date_1").text(lay_ngay(date_1));
                                 $(".date_2").text(lay_ngay(date_2));
-                                alert(lay_ngay(date_0));
                             }
                             else if (train_name === "SE7") {
                                 SE5.style.display = "none";
@@ -6656,6 +6652,7 @@
                 $(".account").hide();
                 $(".home").hide();
                 $(".buy-ticket").hide();
+                $(".form-container").hide();
                 $("#more").show();
                 $("#Regulations").show();
                 $("#Contact").hide();
@@ -6730,9 +6727,7 @@
                 $(".train-station").hide();
                 $(".home").hide();
                 $(".buy-ticket").hide();
-                $("#ttdc_main").hide();
-                $("#trave").hide();
-                $("#gtgv").hide();
+                $(".form-container").hide();
                 $("#more").show();
                 $("#Regulations").hide();
                 $("#Contact").hide();
@@ -6796,9 +6791,7 @@
                 $(".home").hide();
                 $(".buy-ticket").hide();
                 $(".account").hide();
-                $("#ttdc_main").hide();
-                $("#trave").hide();
-                $("#gtgv").hide();
+                $(".form-container").hide();
                 $("#more").show();
                 $("#Guide").hide();
                 $("#Regulations").hide();
@@ -6813,9 +6806,7 @@
                 $(".home").hide();
                 $(".buy-ticket").hide();
                 $(".account").hide();
-                $("#ttdc_main").hide();
-                $("#trave").hide();
-                $("#gtgv").hide();
+                $(".form-container").hide();
                 $("#more").show();
                 $("#Guide").hide();
                 $("#Regulations").hide();
@@ -6944,8 +6935,6 @@
             function account_click(){
                 $(".home").hide();
                 $(".buy-ticket").hide();
-                $("#trave").hide();
-                $("#gtgv").hide();
                 $(".form-container").hide();
                 $("#more").hide();
                 $(".train-station").hide();
@@ -7156,7 +7145,6 @@
                 var year = dateObj.getFullYear();
                 var buy_ticket__date_start_text = day + "/" + month;
                 var buy_ticket__full_date_start_text = day + "/" + month + "/" + year;
-                //alert(buy_ticket__datePicker_value.val());
                 $(".buy_ticket__date_start").text(buy_ticket__date_start_text);
                 $(".buy_ticket__full_date_start").text(buy_ticket__full_date_start_text);
                 $(".buy_ticket__departure_station").text(buy_ticket__station_departure_value.val());
@@ -7357,7 +7345,6 @@
                         }
                     }
                     return text;
-                    //alert(text);
                 }
                 function cloneTr_cart_info(i, text) {
                     var cart_split_text = text.split(" <br> ");
@@ -7473,23 +7460,18 @@
                                     $(".cart-content").show();
                                 else
                                     $(".cart-content").hide();
-                                //alert(split_text[1]);
                             }
                         });
                     })(i);
                 }
 
                 $(".buy-ticket .btn-muave").click(function () {
-                    //alert(1);
                     $("#muave_main").show();
                     $(".buy-ticket").hide();
                     for (var i = 0; i < buying_time_countdown.length; i++) {
                         startCountdown(300, buying_time_countdown[i]);
                     }
                 })
-                /*$("#ntthk_next_btn").click(function () {
-                    
-                })*/
 
                 var ntthk_return_btn = document.getElementById("ntthk_return_btn");
                 var ntthk_next_btn = document.getElementById("ntthk_next_btn");
