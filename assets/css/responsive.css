@@ -160,6 +160,104 @@
         margin: 12px;
         width: calc(100% - 24px);
     }
+   .form-ttdc-container__content {
+        margin-left: 0px;
+        padding-left: 0px;
+        width: fit-content;
+    }
+    .form-ttdc-container__content-input {
+        width: 200px;
+        border: 1px solid black;
+    }
+    .form-ttdc__btn {
+        margin-left: 70px;
+    }
+    .form-ttdc-container__content-btn {
+        width: 450px;
+    }
+    .form-ttdc-booking__info--ticket {
+        font-size: 11px;
+    }
+    .form-ttdc-ticket-booking-info__row {
+        gap: 10px;
+        font-size: 13px;
+    }
+    .form-laymdc-container__content {
+        margin-left: 0px;
+    }
+    .form-laymdc-container__content-function {
+        grid-template-columns: 2fr;
+    }
+    .form-laymdc-container__content-input{
+        width: 370px;
+    }
+    .form-trave-container__content {
+        margin-left: 0px;
+    }
+    .form-trave-container__content-input {
+        width: 200px;
+        border: 1px solid black;
+    }
+    .form-trave__btn {
+        margin-left: 70px;
+    }
+    .form-trave-container__content-btn {
+        width: 450px;
+    }
+    .notice {
+        height: 80px;
+        margin-top: 10px;
+    }
+    .booking__info--ticket {
+        font-size: 11px;
+    }
+    .ticket__cashback {
+        width: 400px;
+    }
+    .form-trave-container__line-container {
+        margin: auto;
+    }
+    .button_xacnhan {
+        margin-left: 270px;
+    }
+    .form-trave-container__done-notice {
+        padding: 5px 5px;
+    }
+    .done {
+        padding: 0px 10px;
+    }
+    .form-gtgv-container {
+        width: 400px;
+        margin: auto;
+    }
+    .form-gtgv-container__content-box {
+        grid-template-columns: 1fr;
+    }
+    .form-gtgv-container__selective-box {
+        grid-template-columns: 1fr;
+    }
+    .form-gtgv-container__selective-box-forward {
+        display: none;
+    }
+    .form-gtgv__input {
+        border: 1px solid black;
+    }
+    .form-gtgv__btn {
+        margin-left: 150px;
+    }
+    .form-gtgv-container__summary-box-none {
+        line-height: 1.2;
+    }
+    .form-gtgv-container__summary-box {
+        margin: 10px 30px;
+    }
+    .form-gtgv-container__summary-box_journey-time {
+        margin: 5px 0px;
+    }
+    .form-gtgv-container__summary-box_journey-log-box_arrow {
+        padding: 23px 10px;
+        font-size: 25px;
+    }
 }
 @media (min-width: 1024px) {
     .hide {
