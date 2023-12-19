@@ -1001,10 +1001,6 @@ td.order_history__table_th{
     height: fit-content;
     z-index: 1;
 }
-.order_history__details{
-    border: 1px solid blue;
-    padding: 30px;
-}
 .order_history__details > p {
     font-size: 25px;
     line-height: 35px;
